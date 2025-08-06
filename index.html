@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico">
+  <title>giulio_pimenoff_uc.html</title>
+  <style>
+    @font-face {
+      font-family: "Trebuchet MS Custom";
+      src: url("assets/Trebuchet MS.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      background-color: #000;
+      color: #FBFBFB;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 90%;
+      line-height: 130%;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .under-construction {
+      margin: 40px 0;
+    }
+
+    .under-construction img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .links-section {
+      margin-top: 60px;
+      text-align: left;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .links-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-transform: lowercase;
+    }
+
+    .links-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-list li {
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .links-list a {
+      color: #FBFBFB;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .links-list a:hover {
+      color: #E220EC;
+    }
+
+    .redirect-page {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+
+    .redirect-page.active {
+      display: flex;
+    }
+
+    .loading-dots::after {
+      content: '';
+      animation: dots 1.5s infinite;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: ''; }
+      40% { content: '.'; }
+      60% { content: '..'; }
+      80%, 100% { content: '...'; }
+    }
+  </style>
+</head>
+<body>
+<!-- Main Page -->
+<div id="main-page" class="container">
+  <div class="under-construction">
+    <img src="assets/uc_1.GIF" alt="Under Construction" onerror="this.style.display='none'; document.getElementById('fallback-text').style.display='block';">
+    <div id="fallback-text" style="display:none; font-size: 24px; margin: 40px 0;">
+      *** UNDER CONSTRUCTION ***
+    </div>
+  </div>
+
+  <div class="links-section">
+    <h2>meanwhile here are some ways to find me</h2>
+    <ul class="links-list">
+      <li>Email: <a href="mailto:giuliopime@gmail.com">giuliopime@gmail.com</a></li>
+      <li>Github: <a href="/github.html" target="_blank">Giuliopime</a></li>
+      <li>Medium: <a href="/medium.html" target="_blank">@giuliopime</a></li>
+      <li>Instagram: <a href="/instagram.html" target="_blank">@giuliopimenoff</a></li>
+      <li>Threads: <a href="/threads.html" target="_blank">@giuliopimenoff</a></li>
+      <li>Twitter: <a href="/twitter.html" target="_blank">@giuliopime</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/favicon.ico">
+  <title>redirection.html</title>
+  <style>
+    @font-face {
+      font-family: "Trebuchet MS Custom";
+      src: url("assets/Trebuchet MS.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      background-color: #000;
+      color: #FBFBFB;
+      font-family: "Trebuchet MS", sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 24px;
+    }
+
+    .loading-dots::after {
+      content: '';
+      animation: dots 1.5s infinite;
+      color: #E220EC; /* pink dots */
+    }
+
+    @keyframes dots {
+      0%, 20% { content: ''; }
+      40% { content: '.'; }
+      60% { content: '..'; }
+      80%, 100% { content: '...'; }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://github.com/Giuliopime";
+    }, 1000);
+  </script>
+</head>
+<body>
+<div>redirecting<span class="loading-dots"></span></div>
+</body>
+</html>
