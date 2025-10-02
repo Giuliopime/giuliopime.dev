@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Trebuchet MS Custom";
+  src: url("/fonts/Trebuchet MS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-color: #000;
+    color: #FBFBFB;
+    font-family: "Trebuchet MS Custom", sans-serif;
+    font-size: 90%;
+    line-height: 130%;
+  }
+
+  html, body, #__nuxt {
+    @apply h-full w-full;
+  }
+}
