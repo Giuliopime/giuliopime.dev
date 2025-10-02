@@ -12,5 +12,11 @@ export default defineNuxtConfig({
     config: {},
     viewer: true,
     exposeConfig: false,
+  },
+
+  nitro: {
+    prerender: {
+      autoSubfolderIndex: false
+    }
   }
 })
