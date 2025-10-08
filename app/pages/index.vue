@@ -4,7 +4,7 @@
 
 		<div class="flex items-center gap-4 mt-[60px]">
 			<threerrows />
-			<NuxtLink to="/blog" class="font-bold text-xl hover:text-coral hover:underline">i wrote smth</NuxtLink>
+			<NuxtLink to="/blog" class="font-bold text-xl hover:text-coral hover:underline text-center">i wrote smth</NuxtLink>
 			<threerrows class="rotate-180" />
 		</div>
 
