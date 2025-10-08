@@ -6,12 +6,12 @@ project: astro
 tags: [project, dev]
 ---
 
-it was the 27th of march 2020 when I got intrigued by the temporary voice channels system of the Rocket League discord server.  
+it was the 27th of March 2020 when I got intrigued by the temporary voice channels system of the Rocket League discord server.  
 so I shot a message to their mods:  
 ![rocket_league_mods.webp](/img/blog/astro/ab_rocket_league_mods.webp)  
 and on the 11th of April I created my first Discord bot.  
 
-we are now 5 full years past that, and I went from a coding a basic javascript application which had me and a couple of friends as its users, to multiple micro-services deployed on my own non-managed kubernetes cluster, handled via IaC (Infrastructure-as-Code), to manage more than 10k daily active users for a total count of 11M users in my database.  
+we are now 5 full years past that, and I went from a coding a basic javascript application which had me and a couple of friends as its users, to multiple microservices deployed on my own non-managed kubernetes cluster, handled via IaC (Infrastructure-as-Code), to manage more than 10k daily active users for a total count of 11M users in my database.  
 
 but wait, you are probably wondering what even are temporary voice channels, and what is a Discord bot in the first place ([if not good, you can skip this](#the-first-version))…  
 basically, Discord is a messaging app (like slack, telegram or whatsapp).  
@@ -31,7 +31,7 @@ I just threw myself into it, and got my first bot online using javascript and th
 of course, initially it was running on my computer, so I had to keep it on 24/7, and to give you an idea of how naive I was, my database was literally a .json file :)  
 
 I soon learned about hosting on a VPS, so I bought one from vultr and copied my code manually with FileZilla onto it (I think the first times I was also copying the `node_modules` black hole).  
-For a while, every time I had to update the bot, I would copy the files via SFTP on my server, get into the shell and restart the javascript process.  
+for a while, every time I had to update the bot, I would copy the files via SFTP on my server, get into the shell and restart the javascript process.  
 
 I do have really nice memories about that period of development, I was in high school and I was coding 24/7, and then with covid hit, I was coding during online classes too.  
 and the good thing is that I was actually using my bot, quite a lot, so it was really cool to tell my friends about new features we could use in our guild and have them play around with the bot.  
@@ -40,8 +40,8 @@ here is a little screenshot of what it looked like (and yes it was called HallMa
 
 ### first mistake and lesson
 I did make a lot of mistakes (of course... I had no knowledge!), lots of [crappy code](https://github.com/bot-astro/archived-Hall-Master/) for sure, but the one that I wanna highlight here is about *asking for help*.  
-in the beginning, I was asking for *lots* of help in the top.gg discord guild, and because my questions were kinda silly I received a lot of "[have you tried googling it?](https://letmegooglethat.com/?q=have+you+tried+googling+it%3F)” which doesn’t feel good when starting out, but is something you 100% *need* to learn.  
-Instead of reading documentation or stack overflow (yes because chatGPT wasn’t a thing back then, crazy right?), I was looking for a shortcut, and while it’s ok to do it some times, that should not be your go-to source of help.  
+in the beginning, I was asking for *lots* of help in the top.gg discord guild (top.gg is a web catalog of Discord bots), and because my questions were kinda silly I received a lot of "[have you tried googling it?](https://letmegooglethat.com/?q=have+you+tried+googling+it%3F)” which doesn’t feel good when starting out, but is something you 100% *need* to learn.  
+instead of reading documentation or stack overflow (yes because chatGPT wasn’t a thing back then, crazy right?), I was looking for a shortcut, and while it’s ok to do it sometimes, that should not be your go-to source of help.  
 
 I wanna mention [Xavin](https://xavin.dev) early on the article because he will come up a lot later on.  
 he was the developer of [Hydra](https://hydra.bot), one of the biggest bots on Discord, which at the time was only used for playing music in your voice channels (now things have changed quite a bit since YouTube lawyered up against these music bots).  
@@ -54,12 +54,12 @@ he was super nice because very early on, he told me, and made me understand that
 
 from that point on, I shifted my mentality, tried to come up with my own solutions and figure stuff out by doing my own research.  
 
-on a side note, I do believe that if AI would have been there, I would not have learned as much as I did, so to those getting started, use AI as a browser engine, not as a replacement of your brain please, you will thank yourself in the future.  
+on a side note, I do believe that if AI had been there, I would not have learned as much as I did, so to those getting started, use AI as a browser engine, not as a replacement of your brain please, you will thank yourself in the future.  
 
 ### growing, feedback and donations
-at that time, [top.gg](top.gg) had a huge amount of traffic, and I managed to get on their front-page for sometime, thanks to people voting for my bot.  
+at that time, [top.gg](https://top.gg) had a huge amount of traffic, and I managed to get on their front-page for some time, thanks to people voting for my bot.  
 this gave me a lot of visibility, and the bot started to grow.  
-I also managed to setup some statistics using InfluxDB, so I had some very aesthetically pleasing view of how the bot was doing:  
+I also managed to set up some statistics using InfluxDB, so I had some very aesthetically pleasing view of how the bot was doing:  
 ![ab_influx_stats.webp](/img/blog/astro/ab_influx_stats.webp)
 ![ab_voice_channels_stats_influx](/img/blog/astro/ab_voice_channels_stats_influx.webp)  
 
@@ -70,9 +70,9 @@ then one day, and I remember it vividly, I received my first donation of $11 fro
 
 I saw the bot was gaining new users every day but I didn’t really think it would be making money at all, but after that more followed, and I started tracking them in an Excel file.  
 ![donations-excel](/img/blog/astro/ab_balance_excel.webp)  
-so in a bunch of days, I setup a premium version of the bot for those who donated, and the activation process for it was all manual on my end, no fancy stripe integrations or anything. I was logging in the excel the donations and modifying a fancy `.env` file updating the list of premium guilds.  
+so in a bunch of days, I set up a premium version of the bot for those who donated, and the activation process for it was all manual on my end, no fancy stripe integrations or anything. I was logging in the excel the donations and modifying a fancy `.env` file updating the list of premium guilds.  
 
-Only after a while I setup a proper Patreon page, which lacked a lot in terms of API at the time, and later on moved to Chargebee, Stripe and PayPal (well Patreon was also my only option because I wasn’t even 18 back then so I literally could not open a PayPal account).  
+only after a while I set up a proper Patreon page, which lacked a lot in terms of API at the time, and later on moved to Chargebee, Stripe and PayPal (well Patreon was also my only option because I wasn’t even 18 back then so I literally could not open a PayPal account).  
 
 ### first contract and infrastructure bottlenecks
 everything was going really well, the bot was growing steadily:  
@@ -92,7 +92,7 @@ and also used it as an example when talking to other developers:
 ![xavin-astro-guild-join-message](/img/blog/astro/ab_guild_join_msg.webp)
 
 thennn, bottlenecks started arising. I already migrated from javascript to Kotlin, but my bot was still running on a single process, and it was hella painful.  
-each restart for even a small update was taking 10+ minutes (which is 10+ minutes of downtime) and the Java Garbage Collector, started to complain too. this resulted in lots of painful debugging, heck I even tried remote debugging, wont wish you that.  
+each restart for even a small update was taking 10+ minutes (which is 10+ minutes of downtime) and the Java Garbage Collector, started to complain too. this resulted in lots of painful debugging, heck I even tried remote debugging, won't wish you that.  
 ![ab_java_gc.webp](/img/blog/astro/ab_java_gc.webp)
 
 luckily, Xavin was there to help.  
@@ -108,12 +108,12 @@ a web dashboard to manage the bot settings was in the plans for a while, but I n
 the amount of settings available to configure the bot were way to many to handle in Discord with a decent UX.  
 this is the configuration help panel for one of the bot’s feature for example:  
 ![help-generator](/img/blog/astro/ab_generator_help_embed.webp)  
-but ngl I really loved the way you could tweak those settings, I did setup a whole system (prior to when slash commands were a thing), in which the bot showed you all the configuration options, and you choose which one to modify by replying to the bot with the name of the setting you wanted to change (or the initials), and then the bot would prompt you for a new value for the setting.  
+but ngl I really loved the way you could tweak those settings, I did set up a whole system (prior to when slash commands were a thing), in which the bot showed you all the configuration options, and you choose which one to modify by replying to the bot with the name of the setting you wanted to change (or the initials), and then the bot would prompt you for a new value for the setting.  
 it also handled concurrency properly, so you could be modifying the same setting only from one place at a time.  
 unfortunately, I have no videos about it, only a screenshot:  
 ![astro-settings-embed](/img/blog/astro/ab_generator_editor_embed.webp)
 
-at one point though I just gave it a shot, taking inspiration from the [atlas.bot](atlas.bot) one, and honestly it took much less time than expected to build an amazing dashboard.  
+at one point though I just gave it a shot, taking inspiration from the [atlas.bot](https://atlas.bot) one, and honestly it took much less time than expected to build an amazing dashboard.  
 I think the evolution of the website is pretty cool, so here it is:  
 <figure>
     <img src="/img/blog/astro/ab_first_website.webp"
@@ -147,7 +147,7 @@ this project grew much past beyond my expectations, here are some statistics tha
 
 this project teach me most of the things I now know about coding, high school and university helped me with having strong fundamentals sure, but this project was key in learning how to apply them to real world scenarios and also discover a lot of key technologies that school does not prepare you for.  
 
-I wont go in depth in the code for this article, because there would really be too much cool stuff to cover, but you can find a technical description of the current status on the GitHub repositories (link at the end of the article!).
+I won't dive into the code in this article, because there would really be too much cool stuff to cover, but you can find a technical description of the current status on the GitHub repositories (link at the end of the article!).
 
 and the best part, is that it thought me so much more than just coding!  
 - it taught me how to listen to customers, and how to handle support requests, this is the amount of messages I sent in the bot support guild to mainly help people out:  
@@ -160,8 +160,10 @@ these days, I don’t really use Discord because I stopped gaming a while ago, a
 I love creating and developing projects that I actually use, and unfortunately this is not the case anymore for Astro.  
 because of that, I decided to stop working on it and don’t plan on adding new features to it anymore, but that doesn’t mean that it’s going offline or anything, the bot will stay alive and serve your amazing guilds for (hopefully) as much as you need it!  
 
-Additionally, I decided to open source all of the code, in the hope that it can help other developers and be taken as an example or reference for ways to overcome certain technical challenges related to large-scale Discord bots development.    
+additionally, I decided to open source all the code, in the hope that it can help other developers and be taken as an example or reference for ways to overcome certain technical challenges related to large-scale Discord bots development.  
 
-I wrote this article mainly for my future self, to remind me about all the challenges I encountered and the exciting times and lessons this project brought me, but I hope you get something meaningful out of it, and that it inspires you to create something yourself, whether it’s a Discord bot or anything else.  
+here are the links for the [backend](https://github/com/bot-astro/astro) and the [frontend](https://github.com/bot-astro/astro-bot.space) GitHub repositories of Astro :>  
+
+I wrote this article mainly for my future self, to remind me about all the challenges I encountered and the exciting times and lessons this project brought me, but I hope you get something meaningful out of it, and that it inspires you to create something yourself, whether it’s a Discord bot or anything else.    
 
 Happy crafting :P
