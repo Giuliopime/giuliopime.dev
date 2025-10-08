@@ -24,18 +24,31 @@ useSeoMeta({
 
 <template>
 	<div class="flex flex-col items-center w-full pt-8 pb-96 px-4">
-		<div class="flex gap-4 mb-8 text-lg border border-black px-4 py-2">
+		<div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-black px-4 py-2">
 			<b>{{ post.title }}</b>
-			· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}
-			<h2></h2>
+			<span class="self-end md:self-start">· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
 		</div>
 
-		<ContentRenderer tag="article" :value="post" class="prose md:prose-xl dark:prose-invert" />
+		<ContentRenderer tag="article" :value="post" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose" />
 	</div>
 </template>
 
 <style scoped>
 article {
 	line-height: 1.6em;
+}
+
+article :where(iframe) {
+	width: 100%;
+	height: 56.25vw; /* 16:9 aspect ratio (9/16 * 100) based on viewport width */
+	max-width: 560px;
+}
+
+@media (min-width: 768px) {
+	article :where(iframe) {
+		width: 560px;
+		height: 315px;
+		max-width: none;
+	}
 }
 </style>
