@@ -11,9 +11,6 @@
 
 @layer base {
   body {
-    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-    background-color: #000;
-    color: #FBFBFB;
     font-family: "Trebuchet MS Custom", sans-serif;
     font-size: 90%;
     line-height: 130%;

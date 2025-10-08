@@ -1,11 +1,11 @@
 <template>
-	<div class="h-full w-full">
+	<div id="content-layout" class="h-full w-full">
 		<slot />
 	</div>
 </template>
 
 <style>
-body {
+#content-layout {
 	background-image: none;
 	background-color: #FBFBFB;
 	color: #000;

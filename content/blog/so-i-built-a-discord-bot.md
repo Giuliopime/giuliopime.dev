@@ -1,7 +1,7 @@
 ---
-title: History and lessons from building a Discord bot that reached 150k servers
+title: Story and lessons from building a Discord bot that reached 150k servers
 description: dummy
-date: 2025-10-01
+date: 2025-09-29
 project: astro
 tags: [project, dev]
 ---
@@ -22,7 +22,7 @@ Discord exposes some APIs so that you can integrate functions to it.
 usually, you create a Discord application, aka bot, you receive events from Discord (via websockets) and you react by performing some sort of action.  
 
 temporary voice channels is a feature that you can add to your guild, with which you design a voice channel as a “generator”: when a user joins the generator, my bot creates a new voice channel for the user and moves him into it, then once the channel gets empty again, my bot deletes it, keeping the server clean and tidy.  
-you can see what the bot does really quick in this video:  
+you can see what the bot does really quick in this video (well I'm making a demo video so this gif will get replaced soon, but settle with that for the moment):  
 ![ab_temporary_voice_channels_demo.gif](/img/blog/astro/ab_temporary_voice_channels_demo.gif)
 
 ### the first version
@@ -131,7 +131,10 @@ I think the evolution of the website is pretty cool, so here it is:
     <figcaption>second version of the Astro website, made with Vue</figcaption>
 </figure>
 
-![nuxt-dashboard-yt-video]()
+<figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>still making this one, hold tight<figcaption>
+</figure>
 
 ### fancy analytics and what I’ve learned
 this project grew much past beyond my expectations, here are some statistics that I gathered trough BigQuery over the past year:  

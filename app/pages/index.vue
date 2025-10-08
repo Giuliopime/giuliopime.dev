@@ -2,6 +2,12 @@
 	<div class="p-20 flex flex-col items-center">
 		<img src="~/assets/images/uc_1.GIF" alt="Under Construction">
 
+		<div class="flex items-center gap-4 mt-[60px]">
+			<threerrows />
+			<NuxtLink to="/blog" class="font-bold text-xl hover:text-coral hover:underline">i wrote smth</NuxtLink>
+			<threerrows class="rotate-180" />
+		</div>
+
 		<div class="mt-[60px] max-w-[400px]">
 			<h2 class="text-center text-[18px] font-bold mb-[30px]">meanwhile here are some ways to find me</h2>
 			<ul class="links-list text-left">
