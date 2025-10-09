@@ -20,6 +20,24 @@ useSeoMeta({
 	'article:published_time': post.value?.date,
 	'article:author': 'giuliopimenoff',
 });
+
+useHead({
+	title: post.value?.title,
+	meta: [
+		// Basic description
+		{ name: 'description', content: post.value?.description },
+
+		// Open Graph
+		{ property: 'og:title', content: post.value?.title },
+		{ property: 'og:description', content: post.value?.description },
+		{ property: 'og:type', content: 'article' },
+		{ property: 'og:locale', content: 'en_US' },
+
+		// Article metadata
+		{ property: 'article:published_time', content: post.value?.date },
+		{ property: 'article:author', content: 'giuliopimenoff' },
+	],
+});
 </script>
 
 <template>
