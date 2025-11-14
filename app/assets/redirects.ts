@@ -18,7 +18,7 @@ const redirects: Array<Redirect> = [
   {
     id: 'medium',
     name: 'medium',
-    url: 'https://medium.com/@giuliopime'
+    url: 'https://medium.com/@gpimenoff'
   },
   {
     id: 'instagram',
