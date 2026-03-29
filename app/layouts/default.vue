@@ -4,7 +4,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 #default-layout {
 	background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
 	background-color: #000;

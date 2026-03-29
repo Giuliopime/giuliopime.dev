@@ -4,7 +4,7 @@
 
 		<div class="flex items-center gap-4 mt-[60px]">
 			<threerrows />
-			<NuxtLink to="/blog" class="font-bold text-xl hover:text-coral hover:underline text-center">i wrote smth</NuxtLink>
+			<NuxtLink to="/blog" class="font-bold text-xl text-center">i wrote smth</NuxtLink>
 			<threerrows class="rotate-180" />
 		</div>
 
@@ -25,14 +25,6 @@
 <style scoped>
 .links-list li {
 	@apply my-[15px] text-[16px];
-}
-
-.links-list a {
-	@apply text-[#FBFBFB] underline transition-colors duration-200 ease-in;
-}
-
-.links-list a:hover {
-	@apply text-[#E221EC];
 }
 </style>
 

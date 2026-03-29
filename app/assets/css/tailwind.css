@@ -19,4 +19,14 @@
   html, body, #__nuxt {
     @apply h-full w-full;
   }
+
+  #default-layout a,
+  #default-layout button {
+    @apply underline underline-offset-4 transition-all px-2 py-1;
+  }
+
+  #default-layout a:not(.no-hover):hover,
+  #default-layout button:hover {
+    @apply no-underline bg-coral text-white;
+  }
 }

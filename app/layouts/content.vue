@@ -4,7 +4,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 #content-layout {
 	background-image: none;
 	background-color: #FBFBFB;

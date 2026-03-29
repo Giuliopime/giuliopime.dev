@@ -26,21 +26,11 @@ useHead({
 		<span class="font-bold text-xl">stuff i wrote</span>
 
 		<ul class="list-disc">
-			<NuxtLink v-for="doc in docs" :key="doc.path" :to="doc.path">
-				<li>
-					<h2>{{ doc.title }}</h2>
-				</li>
-			</NuxtLink>
+      <li>
+        <NuxtLink v-for="doc in docs" :key="doc.path" :to="doc.path">
+           {{ doc.title }}
+        </NuxtLink>
+      </li>
 		</ul>
 	</div>
 </template>
-
-<style scoped>
-a {
-	@apply text-[#FBFBFB] underline transition-colors duration-200 ease-in;
-}
-
-a:hover {
-	@apply text-[#E221EC];
-}
-</style>
