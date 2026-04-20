@@ -25,10 +25,18 @@
   font-display:swap;
 }
 
+@font-face {
+  font-family: pix;
+  src: url(/fonts/dogicapixel.woff2) format("woff2");
+}
+
+
 @layer base {
   html, input {
-    background-color: #f9f9f7;
+    @apply bg-black text-white;
   }
+
+  ;
 
   input {
     @apply outline-none;
@@ -38,13 +46,13 @@
     @apply h-full w-full;
   }
 
-  a:not(.no-underline),
-  button {
-    @apply underline transition-all;
+  ::selection {
+    @apply bg-sky bg-opacity-65 text-black;
   }
+}
 
-  a:not(.no-hover):hover,
-  button:hover {
-    @apply text-coral;
+@layer utilities {
+  .vert-center {
+    @apply flex items-center;
   }
 }

@@ -1,18 +1,26 @@
 <template>
-  <div class="w-full grid grid-cols-3 items-center py-3 px-6 font-thin border-b-[1px] border-gray-500 bg-black text-white">
-    <nuxt-link to="/" class="no-underline">/</nuxt-link>
-    <span class="justify-self-center">
-      {{ route.path.slice(1) }}
-    </span>
-<!--    <div class="justify-self-end flex items-center gap-4">-->
-<!--      <nuxt-link to="/blog" class="no-underline">blog</nuxt-link>-->
-<!--      <nuxt-link to="/guides" class="no-underline">guides</nuxt-link>-->
-<!--      <nuxt-link to="/projects" class="no-underline">projects</nuxt-link>-->
-<!--    </div>-->
-    <p class="justify-self-end font-thin"><nuxt-link to="blog" class="no-underline">blog</nuxt-link>&nbsp;&nbsp;•&nbsp;&nbsp;<nuxt-link to="guides" class="no-underline">guides</nuxt-link>&nbsp;&nbsp;•&nbsp;&nbsp;<nuxt-link to="projects" class="no-underline">projects</nuxt-link></p>
+  <div class="flex items-center justify-between font-[sohne-mono] text-xs py-3 tracking-tight">
+    <div class="vert-center gap-1">
+      <nuxt-link to="/">
+        <img src="/favicon.ico" alt="home" class="w-[1.4rem] h-auto hover:opacity-75" />
+      </nuxt-link>
+      <nuxt-link to="/projects" class="nav-button"><span class="mr-1">[P]</span>PROJECTS</nuxt-link>
+      <nuxt-link to="/blog" class="nav-button"><span class="mr-1">[B]</span>BLOG</nuxt-link>
+      <nuxt-link to="/guides" class="nav-button"><span class="mr-1">[G]</span>GUIDES</nuxt-link>
+    </div>
+
+    <div class="vert-center">
+      <a href="mailto:ping@giuliopime.dev" class="nav-button"><span class="mr-1">[C]</span>CONTACT</a>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
 </script>
+
+<style scoped>
+.nav-button {
+  @apply py-1 px-2 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black;
+}
+</style>
