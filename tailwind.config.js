@@ -4,7 +4,7 @@ export default {
     extend: {
       colors: {
         coral: '#E220EC'
-      }
+      },
     },
   },
   plugins: [

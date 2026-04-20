@@ -3,30 +3,48 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Trebuchet MS Custom";
-  src: url("/fonts/Trebuchet MS.ttf") format("truetype");
-  font-weight: normal;
+  font-family: sohne;
+  src: url(/fonts/Sohne.woff2) format("woff2");
+  font-weight: 1 10000;
+  font-display:block;
+}
+
+@font-face {
+  font-family: sohne;
+  src: url(/fonts/Sohne-BuchKursiv.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display:block;
+}
+
+@font-face {
+  font-family: sohne-mono;
+  src: url(/fonts/SohneMono-Buch.woff2) format("woff2");
+  font-weight: 300;
   font-style: normal;
+  font-display:swap;
 }
 
 @layer base {
-  body {
-    font-family: "Trebuchet MS Custom", sans-serif;
-    font-size: 90%;
-    line-height: 130%;
+  html, input {
+    background-color: #f9f9f7;
+  }
+
+  input {
+    @apply outline-none;
   }
 
   html, body, #__nuxt {
     @apply h-full w-full;
   }
 
-  #default-layout a,
-  #default-layout button {
-    @apply underline underline-offset-4 transition-all px-2 py-1;
+  a:not(.no-underline),
+  button {
+    @apply underline transition-all;
   }
 
-  #default-layout a:not(.no-hover):hover,
-  #default-layout button:hover {
-    @apply no-underline bg-coral text-white;
+  a:not(.no-hover):hover,
+  button:hover {
+    @apply text-coral;
   }
 }
