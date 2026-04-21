@@ -72,7 +72,7 @@ const feed = computed<FeedEntry[]>(() => {
       guides.value?.map((g: any) => ({
         date: new Date(g.date),
         name: g.title,
-        type: 'guides',
+        type: 'guide',
         path: g.path
       })) ?? []
 

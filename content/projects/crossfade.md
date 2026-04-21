@@ -1,7 +1,7 @@
 ---
 title: CrossFade
-description: iOS app to convert song links between platforms
+description: native iOS app to convert song links between platforms directly from your share sheet
 date: 2025-10-11
 major: false
-tags: [kotlin, kubernetes]
+tags: [iOS, SwiftUI]
 ---

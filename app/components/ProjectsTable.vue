@@ -20,16 +20,16 @@
           </span>
           <div class="flex flex-col gap-1.5 pr-4 sm:pr-8">
             <span class="line-clamp-2 leading-snug">{{ entry.title }}</span>
-            <span class="line-clamp-2 leading-snug opacity-75">{{ entry.description }}</span>
-            <div v-if="entry.tags?.length" class="flex flex-wrap gap-1">
-              <span
-                  v-for="tag in entry.tags"
-                  :key="tag"
-                  class="opacity-50 group-hover:opacity-70 border border-current px-1.5 py-px rounded-sm"
-              >
-                {{ tag }}
-              </span>
-            </div>
+            <span class="line-clamp-3 sm:line-clamp-2 leading-snug opacity-75">{{ entry.description }}</span>
+<!--            <div v-if="entry.tags?.length" class="flex flex-wrap gap-1">-->
+<!--              <span-->
+<!--                  v-for="tag in entry.tags"-->
+<!--                  :key="tag"-->
+<!--                  class="opacity-50 group-hover:opacity-70 border border-current px-1 rounded-sm text-[0.65rem]"-->
+<!--              >-->
+<!--                {{ tag }}-->
+<!--              </span>-->
+<!--            </div>-->
           </div>
         </nuxt-link>
         <div class="col-span-2 border-b border-white/50"></div>
