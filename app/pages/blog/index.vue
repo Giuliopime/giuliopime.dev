@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DocumentsTable from "~/components/DocumentsTable.vue";
+
 const { data: docs } = await useAsyncData('documents-list', () => {
 	return queryCollection('blog')
 		.order('date', 'DESC')
@@ -29,12 +31,7 @@ useHead({
 <!--      </li>-->
 <!--		</ul>-->
 <!--	</div>-->
-  <div class="w-full font-thin">
-    <div v-for="doc in docs" :key="doc.path" class="px-4 py-2 border-b-[1px] border-gray-400 w-full flex justify-between">
-      <input placeholder="Search for anything" class="grow">
-    </div>
-    <div v-for="doc in docs" :key="doc.path" class="px-4 py-2 border-b-[1px] border-gray-400 w-full flex justify-between">
-      <span>{{doc.title}}</span><span>{{formatDate(doc.date)}}</span>
-    </div>
+  <div class="pt-20 flex flex-col items-center">
+    <DocumentsTable :feed="docs" />
   </div>
 </template>

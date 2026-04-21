@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 items-center justify-between font-sohne text-xs py-3 tracking-tight select-none">
+  <div ref="navbarContainer" class="grid grid-cols-2 items-center justify-between font-sohne text-xs py-3 tracking-tight select-none">
     <div class="vert-center gap-1">
       <nuxt-link to="/" tabindex="0">
         <img src="/favicon.ico" alt="home" class="min-w-[1.4rem] w-[1.4rem] h-auto hover:opacity-75" />
@@ -18,6 +18,37 @@
   </div>
 </template>
 
+<style scoped>
+.gradient-blur {
+  position: relative;
+}
+
+.gradient-blur::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(4px); /* equivalent to backdrop-blur-sm */
+  -webkit-backdrop-filter: blur(4px);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+</style>
+
 <script setup lang="ts">
 const route = useRoute()
+
+const navbarContainer = ref<HTMLElement | null>(null)
+const { y } = useWindowScroll()
+const scrolledClasses = [
+  'bg-transparent'
+]
+
+watch(y, () => {
+  if (y.value > 0)
+    navbarContainer.value?.classList.add(...scrolledClasses)
+  else
+    navbarContainer.value?.classList.remove(...scrolledClasses)
+})
 </script>

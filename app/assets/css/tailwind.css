@@ -20,6 +20,10 @@
 @layer base {
   html {
     font-family: "Trebuchet MS Custom", sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-color: #000;
+    color: #FBFBFB;
+    overscroll-behavior: none;
   }
 
   html, body, #__nuxt {
@@ -53,5 +57,9 @@
 
   .icon-button-coral {
     @apply flex items-center justify-center py-1 px-1 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  }
+
+  .type-badge {
+    @apply border border-white/50 py-0.5 px-1 uppercase text-white/80;
   }
 }

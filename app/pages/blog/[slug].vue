@@ -1,8 +1,4 @@
 <script setup>
-definePageMeta({
-	layout: 'content',
-})
-
 const slug = useRoute().params.slug
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 	return queryCollection('blog').path(`/blog/${slug}`).first()
@@ -41,8 +37,8 @@ useHead({
 </script>
 
 <template>
-	<div class="flex flex-col items-center w-full pt-8 pb-96 px-4">
-		<div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-black px-4 py-2">
+	<div class="pt-20 flex flex-col items-center w-full pb-96 px-4">
+		<div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-white px-4 py-2">
 			<b>{{ post.title }}</b>
 			<span class="self-end md:self-start">· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
 		</div>

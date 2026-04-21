@@ -42,7 +42,9 @@ export default defineNuxtConfig({
           content: 'website'
         },
 
-        { name: 'theme-color', content: '#000000' }
+        { name: 'theme-color', content: '#000000' },
+
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
       ],
     },
   },
