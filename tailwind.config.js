@@ -8,6 +8,9 @@ export default {
         canary: '#FFFF55',
         alien: '#00FF00'
       },
+      fontFamily: {
+        sohne: ['sohne-mono']
+      }
     },
   },
   plugins: [

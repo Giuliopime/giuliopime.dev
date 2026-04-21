@@ -3,43 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: sohne;
-  src: url(/fonts/Sohne.woff2) format("woff2");
-  font-weight: 1 10000;
-  font-display:block;
-}
-
-@font-face {
-  font-family: sohne;
-  src: url(/fonts/Sohne-BuchKursiv.woff2) format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display:block;
+  font-family: "trebuchet";
+  src: url("/fonts/TrebuchetMS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: sohne-mono;
   src: url(/fonts/SohneMono-Buch.woff2) format("woff2");
-  font-weight: 300;
   font-style: normal;
   font-display:swap;
 }
 
-@font-face {
-  font-family: pix;
-  src: url(/fonts/dogicapixel.woff2) format("woff2");
-}
-
 
 @layer base {
-  html, input {
-    @apply bg-black text-white;
-  }
-
-  ;
-
-  input {
-    @apply outline-none;
+  html {
+    font-family: "Trebuchet MS Custom", sans-serif;
   }
 
   html, body, #__nuxt {
@@ -47,12 +27,31 @@
   }
 
   ::selection {
-    @apply bg-sky bg-opacity-65 text-black;
+    @apply bg-sky text-white;
   }
 }
 
 @layer utilities {
   .vert-center {
     @apply flex items-center;
+  }
+
+  .button-sky {
+    @apply py-1 px-2 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black transition-all duration-200;
+  }
+  .button-sky-active {
+    @apply py-1 px-2 bg-sky bg-opacity-100 text-black transition-all duration-200;
+  }
+
+  .button-coral {
+    @apply py-1 px-2 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  }
+
+  .icon-button-sky {
+    @apply flex items-center justify-center py-1 px-1 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black;
+  }
+
+  .icon-button-coral {
+    @apply flex items-center justify-center py-1 px-1 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
   }
 }
