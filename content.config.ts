@@ -31,6 +31,7 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         date: z.date(),
+        major: z.boolean(),
         tags: z.array(z.string())
       })
     })
