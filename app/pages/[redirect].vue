@@ -18,20 +18,20 @@ if (!redirect) {
 	})
 }
 
-// onMounted(() => {
-// 	// guarantees DOM tree to be fully built
-// 	nextTick(() => {
-// 		if (redirect) {
-// 			setTimeout(() => {
-// 				if (redirect.url.startsWith("mailto:")) {
-// 					window.location.href = redirect.url;
-// 				} else {
-// 					location.replace(redirect.url)
-// 				}
-// 			}, 1000);
-// 		}
-// 	})
-// })
+onMounted(() => {
+	// guarantees DOM tree to be fully built
+	nextTick(() => {
+		if (redirect) {
+			setTimeout(() => {
+				if (redirect.url.startsWith("mailto:")) {
+					window.location.href = redirect.url;
+				} else {
+					location.replace(redirect.url)
+				}
+			}, 1000);
+		}
+	})
+})
 </script>
 
 <style>
