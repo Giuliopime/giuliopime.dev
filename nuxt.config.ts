@@ -61,5 +61,21 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false
     }
+  },
+
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 2,
+        },
+        highlight: {
+          theme: 'gruvbox-dark-hard',
+          langs: [
+            'kotlin',
+          ]
+        }
+      }
+    }
   }
 })

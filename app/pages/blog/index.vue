@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DocumentsTable from "~/components/DocumentsTable.vue";
 
-const { data: docs } = await useAsyncData('documents-list', () => {
+const { data: docs } = await useAsyncData('blog-list', () => {
 	return queryCollection('blog')
 		.order('date', 'DESC')
 		.select('title', 'path', 'description', 'date')

@@ -1,7 +1,7 @@
 ---
 title: ZenBreak
-description: a macOS menu bar app that reminds you to take breaks
-date: 11/04/2023
+description: macOS menu bar app that reminds you to take breaks (JetBrains Kotlin Multiplatform contest)
+date: 2023-04-11
 major: false
 tags: [kotlin, kubernetes]
 ---

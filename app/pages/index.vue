@@ -29,21 +29,22 @@ interface FeedEntry {
   path: string
 }
 
-const { data: projects } = await useAsyncData('projects-list', () => {
+const { data: projects } = await useAsyncData('projects-feed-list', () => {
   return queryCollection('projects')
       .order('date', 'DESC')
       .select('title', 'date', 'path')
+      .limit(3)
       .all()
 })
 
-const { data: blogs } = await useAsyncData('blog-list', () => {
+const { data: blogs } = await useAsyncData('blog-feed-list', () => {
   return queryCollection('blog')
       .order('date', 'DESC')
       .select('title', 'date', 'path')
       .all()
 })
 
-const { data: guides } = await useAsyncData('guides-list', () => {
+const { data: guides } = await useAsyncData('guides-feed-list', () => {
   return queryCollection('guides')
       .order('date', 'DESC')
       .select('title', 'date', 'path')
@@ -71,7 +72,7 @@ const feed = computed<FeedEntry[]>(() => {
       guides.value?.map((g: any) => ({
         date: new Date(g.date),
         name: g.title,
-        type: 'guide',
+        type: 'guides',
         path: g.path
       })) ?? []
 

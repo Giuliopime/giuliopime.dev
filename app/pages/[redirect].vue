@@ -1,6 +1,8 @@
 <template>
-	<div class="flex items-center justify-center h-full text-2xl">
-		redirecting<span class="loading-dots"></span>
+	<div class="flex flex-col grow justify-center items-center min-h-screen text-xl">
+    <p class="vert-center font-sohne">
+      redirecting<span class="loading-dots"></span>
+    </p>
 	</div>
 </template>
 
@@ -16,20 +18,20 @@ if (!redirect) {
 	})
 }
 
-onMounted(() => {
-	// guarantees DOM tree to be fully built
-	nextTick(() => {
-		if (redirect) {
-			setTimeout(() => {
-				if (redirect.url.startsWith("mailto:")) {
-					window.location.href = redirect.url;
-				} else {
-					location.replace(redirect.url)
-				}
-			}, 1000);
-		}
-	})
-})
+// onMounted(() => {
+// 	// guarantees DOM tree to be fully built
+// 	nextTick(() => {
+// 		if (redirect) {
+// 			setTimeout(() => {
+// 				if (redirect.url.startsWith("mailto:")) {
+// 					window.location.href = redirect.url;
+// 				} else {
+// 					location.replace(redirect.url)
+// 				}
+// 			}, 1000);
+// 		}
+// 	})
+// })
 </script>
 
 <style>

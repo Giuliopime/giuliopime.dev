@@ -1,7 +1,7 @@
 ---
 title: Index
 description: yet another (native) lists & tasks app
-date: 11/04/2026
+date: 2026-04-11
 major: true
-tags: [kotlin, kubernetes]
+tags: []
 ---

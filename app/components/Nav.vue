@@ -11,7 +11,7 @@
 
     <div class="vert-center gap-1 justify-self-end">
       <a href="mailto:ping@giuliopime.dev" class="button-sky"><span class="hidden sm:inline mr-1">[C]</span>CONTACT</a>
-      <nuxt-link to="/github" class="icon-button-sky" tabindex="1">
+      <nuxt-link to="/github" target="_blank" class="icon-button-sky" tabindex="1">
         <Icon name="pixelarticons:github" class="text-base" />
       </nuxt-link>
     </div>
