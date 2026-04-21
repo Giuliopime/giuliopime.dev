@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import DocumentsTable from "~/components/DocumentsTable.vue";
+
 const { data: docs } = await useAsyncData('documents-list', () => {
 	return queryCollection('blog')
 		.order('date', 'DESC')
-		.select('title', 'path', 'description')
+		.select('title', 'path', 'description', 'date')
 		.all()
 })
 
@@ -22,15 +24,14 @@ useHead({
 </script>
 
 <template>
-	<div class="flex flex-col items-center justify-center h-full px-8 py-16 gap-6">
-		<span class="font-bold text-xl">stuff i wrote</span>
-
-		<ul class="list-disc">
-      <li>
-        <NuxtLink v-for="doc in docs" :key="doc.path" :to="doc.path">
-           {{ doc.title }}
-        </NuxtLink>
-      </li>
-		</ul>
-	</div>
+<!--	<div class="flex flex-col items-center justify-center h-full px-8 py-16 gap-6">-->
+<!--		<ul class="list-disc">-->
+<!--      <li v-for="doc in docs" :key="doc.path" >-->
+<!--        <NuxtLink :to="doc.path" class="no-underline">{{ doc.title }}</NuxtLink>-->
+<!--      </li>-->
+<!--		</ul>-->
+<!--	</div>-->
+  <div class="pt-20 flex flex-col items-center">
+    <DocumentsTable :feed="docs" />
+  </div>
 </template>

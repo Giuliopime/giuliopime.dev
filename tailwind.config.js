@@ -3,7 +3,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        coral: '#E220EC'
+        coral: '#E220EC',
+        sky: '#74FBFD',
+        canary: '#FFFF55',
+        alien: '#00FF00'
+      },
+      fontFamily: {
+        sohne: ['sohne-mono']
       }
     },
   },

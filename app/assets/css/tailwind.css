@@ -3,30 +3,63 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Trebuchet MS Custom";
-  src: url("/fonts/Trebuchet MS.ttf") format("truetype");
+  font-family: "trebuchet";
+  src: url("/fonts/TrebuchetMS.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: sohne-mono;
+  src: url(/fonts/SohneMono-Buch.woff2) format("woff2");
+  font-style: normal;
+  font-display:swap;
+}
+
+
 @layer base {
-  body {
+  html {
     font-family: "Trebuchet MS Custom", sans-serif;
-    font-size: 90%;
-    line-height: 130%;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-color: #000;
+    color: #FBFBFB;
+    overscroll-behavior: none;
   }
 
   html, body, #__nuxt {
     @apply h-full w-full;
   }
 
-  #default-layout a,
-  #default-layout button {
-    @apply underline underline-offset-4 transition-all px-2 py-1;
+  ::selection {
+    @apply bg-sky text-white;
+  }
+}
+
+@layer utilities {
+  .vert-center {
+    @apply flex items-center;
   }
 
-  #default-layout a:not(.no-hover):hover,
-  #default-layout button:hover {
-    @apply no-underline bg-coral text-white;
+  .button-sky {
+    @apply py-1 px-2 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black transition-all duration-200;
+  }
+  .button-sky-active {
+    @apply py-1 px-2 bg-sky bg-opacity-100 text-black transition-all duration-200;
+  }
+
+  .button-coral {
+    @apply py-1 px-2 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  }
+
+  .icon-button-sky {
+    @apply flex items-center justify-center py-1 px-1 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black;
+  }
+
+  .icon-button-coral {
+    @apply flex items-center justify-center py-1 px-1 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  }
+
+  .type-badge {
+    @apply border border-white/50 py-0.5 px-1 uppercase text-white/80;
   }
 }

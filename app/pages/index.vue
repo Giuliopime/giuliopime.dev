@@ -1,32 +1,82 @@
 <template>
-	<div class="p-20 flex flex-col items-center">
-		<img src="~/assets/images/uc_1.GIF" alt="Under Construction">
+  <div class="pt-[6.5rem] flex flex-col items-center">
+    <img src="~/assets/images/uc_1.GIF" alt="Under Construction" draggable="false" class="select-none px-8 sm:px-20">
 
-		<div class="flex items-center gap-4 mt-[60px]">
-			<threerrows />
-			<NuxtLink to="/blog" class="font-bold text-xl text-center">i wrote smth</NuxtLink>
-			<threerrows class="rotate-180" />
-		</div>
+    <div class="mt-[60px] max-w-[500px] text-center px-8 sm:px-20 ">
+      <p class="font-bold">Hey, Giulio here :)</p>
+      <p class="mt-10">
+        I architect and craft backends, ideally in <span class="selection:bg-">Kotlin</span>. Sometimes I touch Swift code too.
+      </p>
+      <p>
+        I touch css only with a gun to my head.
+      </p>
+    </div>
 
-		<div class="mt-[60px] max-w-[400px]">
-			<h2 class="text-center text-[18px] font-bold mb-[30px]">meanwhile here are some ways to find me</h2>
-			<ul class="links-list text-left">
-				<li>Email: <a href="mailto:ping@giuliopime.dev">ping@giuliopime.dev</a></li>
-				<li>Github: <a href="/github" target="_blank">Giuliopime</a></li>
-				<li>Medium: <a href="/medium" target="_blank">@giuliopime</a></li>
-				<li>Instagram: <a href="/instagram" target="_blank">@giuliopimenoff</a></li>
-				<li>Threads: <a href="/threads" target="_blank">@giuliopimenoff</a></li>
-				<li>Twitter: <a href="/twitter" target="_blank">@giuliopime</a></li>
-			</ul>
-		</div>
-	</div>
+    <FeedTable
+        :feed="feed"
+    />
+
+  </div>
 </template>
 
-<style scoped>
-.links-list li {
-	@apply my-[15px] text-[16px];
-}
-</style>
-
 <script setup lang="ts">
+import FeedTable from "~/components/FeedTable.vue";
+
+interface FeedEntry {
+  date: Date
+  name: string
+  type: string
+  path: string
+}
+
+const { data: projects } = await useAsyncData('projects-list', () => {
+  return queryCollection('projects')
+      .order('date', 'DESC')
+      .select('title', 'date', 'path')
+      .all()
+})
+
+const { data: blogs } = await useAsyncData('blog-list', () => {
+  return queryCollection('blog')
+      .order('date', 'DESC')
+      .select('title', 'date', 'path')
+      .all()
+})
+
+const { data: guides } = await useAsyncData('guides-list', () => {
+  return queryCollection('guides')
+      .order('date', 'DESC')
+      .select('title', 'date', 'path')
+      .all()
+})
+
+const feed = computed<FeedEntry[]>(() => {
+  const projectEntries: FeedEntry[] =
+      projects.value?.map((p: any) => ({
+        date: new Date(p.date),
+        name: p.title,
+        type: 'project',
+        path: p.path
+      })) ?? []
+
+  const blogEntries: FeedEntry[] =
+      blogs.value?.map((b: any) => ({
+        date: new Date(b.date),
+        name: b.title,
+        type: 'blog',
+        path: b.path
+      })) ?? []
+
+  const guideEntries: FeedEntry[] =
+      guides.value?.map((g: any) => ({
+        date: new Date(g.date),
+        name: g.title,
+        type: 'guide',
+        path: g.path
+      })) ?? []
+
+  return [...projectEntries, ...blogEntries, ...guideEntries].sort(
+      (a, b) => b.date.getTime() - a.date.getTime()
+  )
+})
 </script>
