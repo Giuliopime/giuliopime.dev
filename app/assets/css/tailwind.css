@@ -31,7 +31,15 @@
   }
 
   ::selection {
-    @apply bg-sky text-white;
+    @apply bg-sky text-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply scroll-mt-20;
+  }
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    @apply !no-underline hover:!underline;
   }
 }
 

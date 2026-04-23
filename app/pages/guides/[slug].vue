@@ -12,7 +12,7 @@ const { data: post } = await useAsyncData(`guide-${slug}`, () => {
       <span class="self-end md:self-start">· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
     </div>
 
-    <ContentRenderer tag="article" :value="post" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose" />
+    <ContentRenderer tag="article" :value="post" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
   </div>
 </template>
 
