@@ -1,5 +1,5 @@
 <template>
-  <div class="dark min-h-full w-full">
+  <div class="dark min-h-full w-full pb-10">
     <Nav class="fixed left-0 right-0 px-4 z-50"/>
     <div class="fixed left-0 right-0 top-0 z-40 h-16 pointer-events-none gradient-blur-overlay"/>
     <slot />

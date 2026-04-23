@@ -40,10 +40,12 @@
 </template>
 
 <script setup lang="ts">
+import type { ProjectsCollectionItem } from '@nuxt/content'
+
 defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, path } */
   feed: {
-    type: Array<Project>,
+    type: Array<ProjectsCollectionItem>,
     required: true,
     default: () => [],
   },

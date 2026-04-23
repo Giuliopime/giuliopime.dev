@@ -1,7 +1,6 @@
-export interface Project {
-    path: string
-    title: string
-    description: string
+export interface FeedEntry {
     date: Date
-    tags: string[]
+    name: string
+    type: string
+    path: string
 }

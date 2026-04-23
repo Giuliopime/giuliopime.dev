@@ -32,7 +32,11 @@ export default defineContentConfig({
         description: z.string(),
         date: z.date(),
         major: z.boolean(),
-        tags: z.array(z.string())
+        tags: z.array(z.string()),
+        links: z.array(z.object({
+          title: z.string(),
+          url: z.string(),
+        }))
       })
     })
   }

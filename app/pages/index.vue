@@ -12,22 +12,13 @@
       </p>
     </div>
 
-    <FeedTable
-        :feed="feed"
-    />
+    <FeedTable :feed="feed" />
 
   </div>
 </template>
 
 <script setup lang="ts">
 import FeedTable from "~/components/FeedTable.vue";
-
-interface FeedEntry {
-  date: Date
-  name: string
-  type: string
-  path: string
-}
 
 const { data: projects } = await useAsyncData('projects-feed-list', () => {
   return queryCollection('projects')
