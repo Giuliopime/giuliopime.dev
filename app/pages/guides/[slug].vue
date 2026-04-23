@@ -25,7 +25,7 @@ const relatedProject = computed(() => {
 
     <ContentRenderer tag="article" :value="post" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
 
-    <div class="flex flex-col justify-start mt-20" v-if="relatedProject">
+    <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem]" v-if="relatedProject">
       <span class="text-coral font-sohne text-xs py-2">/ RELATED-PROJECT</span>
 
       <div class="grid grid-cols-[1fr_auto] gap-x-8">
