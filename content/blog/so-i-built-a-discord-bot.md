@@ -132,8 +132,8 @@ I think the evolution of the website is pretty cool, so here it is:
 </figure>
 
 <figure>
-    <iframe src="https://www.youtube.com/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption>still making this one, hold tight<figcaption>
+    <iframe src="https://www.youtube.com/embed/6HF8EwMBanY?si=jEgZQzdv31FMsxEB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>third version with settings dashboard, made with Nuxt<figcaption>
 </figure>
 
 ### fancy analytics and what I’ve learned

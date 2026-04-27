@@ -5,11 +5,19 @@
     <div class="mt-[60px] max-w-[500px] text-center px-8 sm:px-20 ">
       <p class="font-bold">Hey, Giulio here :)</p>
       <p class="mt-10">
-        I architect and craft backends, ideally in <span class="selection:bg-">Kotlin</span>. Sometimes I touch Swift code too.
+        I architect and craft backend systems, ideally in <span class="selection:bg-">Kotlin</span>.
+        Sometimes I do Swift development too.
       </p>
       <p>
         I touch css only with a gun to my head.
       </p>
+
+      <p class="mt-8 mb-0.5">
+        If you are tight on time
+      </p>
+      <nuxt-link to="/cv_pimenoff_verdolin_giulio.pdf" target="_blank" class="button-sky text-xs">
+        DOWNLOAD MY CV
+      </nuxt-link>
     </div>
 
     <FeedTable :feed="feed" />
