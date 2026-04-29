@@ -1,4 +1,11 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "projects",
+  ogTitle: "projects",
+  description: "most of the interesting things I build end up listed here.",
+  ogDescription: "most of the interesting things I build end up listed here."
+})
+
 const { data: docs } = await useAsyncData('projects-list', () => {
   return queryCollection('projects')
       .order('date', 'DESC')

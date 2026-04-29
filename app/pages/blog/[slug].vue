@@ -1,7 +1,20 @@
 <script setup>
 const slug = useRoute().params.slug
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
-	return queryCollection('blog').path(`/blog/${slug}`).first()
+	return queryCollection('blog')
+      .path(`/blog/${slug}`)
+      .select('title', 'description', 'project', 'date')
+      .first()
+})
+
+useSeoMeta({
+  title: post.value?.title,
+  ogTitle: post.value?.title,
+  description: post.value?.description,
+  ogDescription: post.value?.description,
+  ogType: "article",
+  articlePublishedTime: post.value?.date,
+  articleAuthor: ['https://giuliopime.dev']
 })
 
 const { data: projects } = await useAsyncData('projects-list', () => {
@@ -14,37 +27,6 @@ const { data: projects } = await useAsyncData('projects-list', () => {
 const relatedProject = computed(() => {
   return projects.value?.find((a) => a.title?.toLowerCase() === post.value?.project?.toLowerCase())
 })
-
-useSeoMeta({
-	title: post.value?.title,
-	description: post.value?.description,
-
-	ogTitle: post.value?.title,
-	ogDescription: post.value?.description,
-	ogType: 'article',
-	ogLocale: 'en_US',
-
-	'article:published_time': post.value?.date,
-	'article:author': 'giuliopimenoff',
-});
-
-useHead({
-	title: post.value?.title,
-	meta: [
-		// Basic description
-		{ name: 'description', content: post.value?.description },
-
-		// Open Graph
-		{ property: 'og:title', content: post.value?.title },
-		{ property: 'og:description', content: post.value?.description },
-		{ property: 'og:type', content: 'article' },
-		{ property: 'og:locale', content: 'en_US' },
-
-		// Article metadata
-		{ property: 'article:published_time', content: post.value?.date },
-		{ property: 'article:author', content: 'giuliopimenoff' },
-	],
-});
 </script>
 
 <template>

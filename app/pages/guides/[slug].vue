@@ -1,7 +1,20 @@
 <script setup>
 const slug = useRoute().params.slug
 const { data: post } = await useAsyncData(`guide-${slug}`, () => {
-	return queryCollection('guides').path(`/guides/${slug}`).first()
+	return queryCollection('guides')
+      .path(`/guides/${slug}`)
+      .select('title', 'description', 'project', 'date')
+      .first()
+})
+
+useSeoMeta({
+  title: post.value?.title,
+  ogTitle: post.value?.title,
+  description: post.value?.description,
+  ogDescription: post.value?.description,
+  ogType: "article",
+  articlePublishedTime: post.value?.date,
+  articleAuthor: ['https://giuliopime.dev']
 })
 
 const { data: projects } = await useAsyncData('projects-list', () => {

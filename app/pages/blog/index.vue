@@ -1,4 +1,11 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "blog",
+  ogTitle: "blog",
+  description: "longer articles about things I'm interested in or experienced",
+  ogDescription: "longer articles about things I'm interested in or experienced"
+})
+
 import DocumentsTable from "~/components/DocumentsTable.vue";
 
 const { data: docs } = await useAsyncData('blog-list', () => {
@@ -7,20 +14,6 @@ const { data: docs } = await useAsyncData('blog-list', () => {
 		.select('title', 'path', 'description', 'date')
 		.all()
 })
-
-useHead({
-	title: "i write stuff here",
-	meta: [
-		// Basic description
-		{ name: 'description', content: "with an irregular schedule" },
-
-		// Open Graph
-		{ property: 'og:title', content: "i write stuff here" },
-		{ property: 'og:description', content: "with an irregular schedule" },
-		{ property: 'og:type', content: 'article' },
-		{ property: 'og:locale', content: 'en_US' },
-	],
-});
 </script>
 
 <template>

@@ -6,6 +6,13 @@ const { data: project } = await useAsyncData(`project-${slug}`, () => {
   return queryCollection('projects').path(`/projects/${slug}`).first()
 })
 
+useSeoMeta({
+  title: project.value?.title,
+  ogTitle: project.value?.title,
+  description: project.value?.description,
+  ogDescription: project.value?.description,
+})
+
 const { data: blogs } = await useAsyncData('blog-feed-list', () => {
   return queryCollection('blog')
       .order('date', 'DESC')

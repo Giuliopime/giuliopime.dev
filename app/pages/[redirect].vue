@@ -18,6 +18,11 @@ if (!redirect) {
 	})
 }
 
+useSeoMeta({
+  title: () => redirect.name,
+  ogTitle: () => redirect.name,
+})
+
 onMounted(() => {
 	// guarantees DOM tree to be fully built
 	nextTick(() => {
