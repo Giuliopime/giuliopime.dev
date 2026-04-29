@@ -100,7 +100,7 @@ contentWindowInsets = ScaffoldDefaults.contentWindowInsets.exclude(NavigationBar
 ```
 
 ## Demo & code
-![BottomNavigationBar demo](~/assets/images/jetpack-demos/bottom-navigation-bar.gif "BottomNavigationBar demo")  
+![BottomNavigationBar demo](/img/blog/android/bottom-navigation-bar.gif "BottomNavigationBar demo")  
 
 You can find the full code for the demo in this article on my [GitHub repo](https://github.com/Giuliopime/jetpack-demos/tree/main)  
 
