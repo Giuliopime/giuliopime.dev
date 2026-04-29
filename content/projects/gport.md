@@ -4,13 +4,36 @@ description: k8s IaC + ArgoCD configs I use to deploy my projects
 date: 2026-04-03
 major: true
 tags: [k8s, IaC, CI/CD, ArgoCD]
+links: [
+  {title: 'github', url: 'https://github.com/Giuliopime/gport'},
+]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla dolor, pellentesque et mollis eu, suscipit ut neque. Aenean ultrices libero et purus bibendum, non interdum mauris laoreet. Morbi quis risus dolor. Mauris vehicula est urna, sit amet congue quam fermentum ac. Donec sit amet felis bibendum, porttitor metus dictum, efficitur orci. Etiam tincidunt dui sed velit egestas pretium. Pellentesque bibendum quis urna id aliquet. Suspendisse eu velit dignissim, sagittis nisl at, porttitor odio. Fusce tincidunt varius posuere. Proin mattis dolor posuere, rhoncus neque mollis, pellentesque eros. Mauris vulputate vel sapien sed sollicitudin.
+My IaC holy repo, where I store terraform configs for my kubernetes cluster and ArgoCD application manifests.  
 
-Integer interdum viverra sollicitudin. Phasellus sapien est, tempus et faucibus in, tincidunt vitae erat. Nullam ornare ipsum nec arcu vulputate rhoncus. Sed laoreet dictum fermentum. Etiam a ante non ipsum imperdiet dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean rhoncus orci in eros consectetur lacinia. Fusce hendrerit, dolor eu imperdiet tincidunt, leo est fringilla nibh, nec elementum velit erat id nunc. Cras blandit turpis pharetra justo feugiat, in tempus quam congue. Sed consequat elit sit amet pellentesque mattis. Nunc pellentesque turpis a rhoncus posuere. Integer sagittis molestie varius. Proin sollicitudin lectus id quam porttitor, sit amet tincidunt nisl mollis. Quisque enim purus, ullamcorper quis ornare ac, dapibus vitae nulla.
+I use Hetzner as cloud provider, I create a Kubernetes cluster using k3s hosted on non-dedicated servers.    
+this part is managed via terraform and the [terraform-hcloud-kube-hetzner](https://github.com/kube-hetzner/terraform-hcloud-kube-hetzner) module.  
 
-Aliquam aliquam felis in metus maximus pretium. Praesent pellentesque rutrum finibus. Donec sagittis varius commodo. Mauris metus ipsum, malesuada et nulla ut, lobortis commodo eros. Fusce pharetra nisi a tellus tempus ultrices. Nulla facilisi. Vestibulum accumsan tincidunt tempor. Curabitur quis tortor justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent at finibus nisi, et suscipit augue. Ut non sapien luctus nunc finibus porta quis nec urna. Nam non mi tempus, volutpat neque sed, faucibus augue. Quisque quis vestibulum mi, ultricies gravida metus. Nam a orci dictum, dapibus purus quis, sollicitudin est. Vivamus quis elit et lacus tempor maximus a at orci.
+### what gets created
+- sealed secrets that can be safely stored on GitHub (I have a script that automates generation from plain secrets project wide)
+- a grafana dashboard correctly routed using Cloudflare DNS
+- a control-plane node pool with 3 nodes
+- an agent node pool for lightweight applications and core kubernetes services
+- an autoscaler agent node pool for general purpose applications
+- 2 Hetzner load balancers, one for the control plane and one for the agent nodes
+- all nodes use [`OpenSUSE MicroOS`](https://microos.opensuse.org)
 
-Sed eu efficitur nisl, id viverra ipsum. Quisque volutpat vehicula libero, eu tincidunt ligula mattis at. Ut consectetur non odio quis egestas. Cras et metus sit amet quam dapibus commodo. Praesent tempus ex nec imperdiet elementum. Donec sit amet sagittis justo, sit amet eleifend sem. Ut dapibus egestas malesuada.
+kubernetes wise (installed directly via the kube-hetzner Terraform module):
+- calico as the CNI
+- nginx
+- longhorn for efficient and scalable storage management  
+  is used to have fast persistant storage for stuff like DBs.  
+  uses all the nodes nvme storage and manages them together giving you a simple StorageClass that you can use in your PVCs.
+- kured for automatic kernel updates
+- cluster autoscaler (bless it)
+- smb support: in the future I wanna use Hetzner Storage Boxes for hosting immich and other stuff
 
+### how I deploy apps using it
+Since it's running ArgoCD, I usually create a repo with the IaC of my new project and then point ArgoCD to it, which takes care of all the heavy lifting for getting it online automatically.  
+
+Before hand I setup CI so that whenever I commit some code on my new project, it builds the Docker image, stores it somewhere with a clean version tag, and then I just have to update the `version.yaml` file in my IaC repo to have ArgoCD deploy the new version, with the option to roll back via a simple `git revert` operation.  

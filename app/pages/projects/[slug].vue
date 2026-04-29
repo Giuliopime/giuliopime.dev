@@ -78,13 +78,13 @@ const relatedArticles = computed<FeedEntry[]>(() => {
       </div>
 
       <div class="flex flex-col mt-10 lg:mt-0 px-2 lg:px-0">
-        <span class="text-coral font-sohne text-xs">/ DESCRIPTION</span>
+        <span class="text-coral font-sohne text-xs mb-2">/ DESCRIPTION</span>
 
         <ContentRenderer tag="article" :value="project" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
       </div>
     </div>
 
-    <div class="flex flex-col justify-start">
+    <div class="flex flex-col justify-start" v-if="relatedArticles.length">
       <FeedTable :feed="relatedArticles">
         <template #header>
           <span class="text-coral font-sohne text-xs py-2">/ RELATED-ARTICLES</span>

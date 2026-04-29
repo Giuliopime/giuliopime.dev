@@ -4,13 +4,33 @@ description: Kotlin Multiplatform desktop menu bar app that reminds you to take 
 date: 2023-04-11
 major: false
 tags: [Kotlin Multiplatform, SwiftUI, SvelteKit]
+links: [
+  {title: 'website', url: 'https://zenbreak.app'},
+  {title: 'app_store', url: 'https://apps.apple.com/it/app/zenbreak-focus-timer/id6470151195?l=en-GB&mt=12'},
+  {title: 'github', url: 'https://github.com/Giuliopime/zenbreak'}
+]
 ---
+This app simply reminds you to take a break from the screen, it has customisable behaviour and appearance to suit everyone needs.  
+(*Check out the [website](https://zenbreak.app) for more screenshots*)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla dolor, pellentesque et mollis eu, suscipit ut neque. Aenean ultrices libero et purus bibendum, non interdum mauris laoreet. Morbi quis risus dolor. Mauris vehicula est urna, sit amet congue quam fermentum ac. Donec sit amet felis bibendum, porttitor metus dictum, efficitur orci. Etiam tincidunt dui sed velit egestas pretium. Pellentesque bibendum quis urna id aliquet. Suspendisse eu velit dignissim, sagittis nisl at, porttitor odio. Fusce tincidunt varius posuere. Proin mattis dolor posuere, rhoncus neque mollis, pellentesque eros. Mauris vulputate vel sapien sed sollicitudin.
 
-Integer interdum viverra sollicitudin. Phasellus sapien est, tempus et faucibus in, tincidunt vitae erat. Nullam ornare ipsum nec arcu vulputate rhoncus. Sed laoreet dictum fermentum. Etiam a ante non ipsum imperdiet dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean rhoncus orci in eros consectetur lacinia. Fusce hendrerit, dolor eu imperdiet tincidunt, leo est fringilla nibh, nec elementum velit erat id nunc. Cras blandit turpis pharetra justo feugiat, in tempus quam congue. Sed consequat elit sit amet pellentesque mattis. Nunc pellentesque turpis a rhoncus posuere. Integer sagittis molestie varius. Proin sollicitudin lectus id quam porttitor, sit amet tincidunt nisl mollis. Quisque enim purus, ullamcorper quis ornare ac, dapibus vitae nulla.
+This is a [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html) app, split into different re-usable modules, built for the [Jetbrains Contest](https://blog.jetbrains.com/kotlin/2022/10/join-the-kotlin-multiplatform-contest/) and for personal use!  
+The resulting MacOS app is a native XCode project that uses the shared Kotlin-multiplaform data module and popup UI.  
+Other than MacOS, the app gets built and made available for Windows and Linux.  
 
-Aliquam aliquam felis in metus maximus pretium. Praesent pellentesque rutrum finibus. Donec sagittis varius commodo. Mauris metus ipsum, malesuada et nulla ut, lobortis commodo eros. Fusce pharetra nisi a tellus tempus ultrices. Nulla facilisi. Vestibulum accumsan tincidunt tempor. Curabitur quis tortor justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent at finibus nisi, et suscipit augue. Ut non sapien luctus nunc finibus porta quis nec urna. Nam non mi tempus, volutpat neque sed, faucibus augue. Quisque quis vestibulum mi, ultricies gravida metus. Nam a orci dictum, dapibus purus quis, sollicitudin est. Vivamus quis elit et lacus tempor maximus a at orci.
+## Inspiration and resources
+This project has been inspired by [BreakTimer](https://breaktimer.app).  
+I didn't want a js runtime just for a simple menu bar app so I took the opportunity to build ZenBreak ^^  
 
-Sed eu efficitur nisl, id viverra ipsum. Quisque volutpat vehicula libero, eu tincidunt ligula mattis at. Ut consectetur non odio quis egestas. Cras et metus sit amet quam dapibus commodo. Praesent tempus ex nec imperdiet elementum. Donec sit amet sagittis justo, sit amet eleifend sem. Ut dapibus egestas malesuada.
-
+I've found a few projects that really helped learning the technologies used in this project:
+- [John O'Reilly](https://johnoreilly.dev/)  
+  thank you so much for all the open source repos of your GitHub and the blog, helped a ton expecially with macOS related stuff!
+- [Rick Clephas](https://github.com/rickclephas)  
+  amazing Kotlin native libraries 🫶🏼
+- [TomatoBar](https://github.com/ivoronin/TomatoBar)  
+  great open source macOS menu bar app, gave me a solid base for the macOS app!
+- [Conveyor](https://conveyor.hydraulic.dev/)  
+  amazing tool to built desktop installers for your app, recommend 💯
+- [Touchlab](https://touchlab.co/)  
+  great tools for kotlin native, such as [KMMBridge](https://github.com/touchlab/KMMBridge)
+- [Kotlin Community](https://kotlinlang.org/community/) of course :>

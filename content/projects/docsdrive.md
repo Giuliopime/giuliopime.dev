@@ -4,13 +4,24 @@ description: a Google-Drive-like file manager for agencies
 date: 2021-08-25
 major: false
 tags: [ktor, nuxt]
+links: [
+  {title: 'backend', url: 'https://github.com/Giuliopime/docs-drive-backend'},
+  {title: 'frontend', url: 'https://github.com/Giuliopime/docs-drive-frontend'},
+  {title: 'demo', url: 'https://www.youtube.com/watch?v=Yq_CwU_XM9I'},
+]
 ---
+DocsDrive is a document & file manager.  
+There is an initial admin user that can access the system and create other users, that can be either admin or not.  
+An admin user can create, modify and delete users. Each user has a document folder, that can contain any kind of file, files which are uploaded by admins.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla dolor, pellentesque et mollis eu, suscipit ut neque. Aenean ultrices libero et purus bibendum, non interdum mauris laoreet. Morbi quis risus dolor. Mauris vehicula est urna, sit amet congue quam fermentum ac. Donec sit amet felis bibendum, porttitor metus dictum, efficitur orci. Etiam tincidunt dui sed velit egestas pretium. Pellentesque bibendum quis urna id aliquet. Suspendisse eu velit dignissim, sagittis nisl at, porttitor odio. Fusce tincidunt varius posuere. Proin mattis dolor posuere, rhoncus neque mollis, pellentesque eros. Mauris vulputate vel sapien sed sollicitudin.
+A non admin user can just see the documents that the admins uploaded for them.  
+Admin can also set a redirect for non-admin users, so that when one of those users logs in, he gets immediately redirected somewhere.  
 
-Integer interdum viverra sollicitudin. Phasellus sapien est, tempus et faucibus in, tincidunt vitae erat. Nullam ornare ipsum nec arcu vulputate rhoncus. Sed laoreet dictum fermentum. Etiam a ante non ipsum imperdiet dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean rhoncus orci in eros consectetur lacinia. Fusce hendrerit, dolor eu imperdiet tincidunt, leo est fringilla nibh, nec elementum velit erat id nunc. Cras blandit turpis pharetra justo feugiat, in tempus quam congue. Sed consequat elit sit amet pellentesque mattis. Nunc pellentesque turpis a rhoncus posuere. Integer sagittis molestie varius. Proin sollicitudin lectus id quam porttitor, sit amet tincidunt nisl mollis. Quisque enim purus, ullamcorper quis ornare ac, dapibus vitae nulla.
+I initially built it for an insurance Agency back in 2021 as you might notice from the commit history, that's why you might see the name *docali* pop up here and there in the 2 repos.  
 
-Aliquam aliquam felis in metus maximus pretium. Praesent pellentesque rutrum finibus. Donec sagittis varius commodo. Mauris metus ipsum, malesuada et nulla ut, lobortis commodo eros. Fusce pharetra nisi a tellus tempus ultrices. Nulla facilisi. Vestibulum accumsan tincidunt tempor. Curabitur quis tortor justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent at finibus nisi, et suscipit augue. Ut non sapien luctus nunc finibus porta quis nec urna. Nam non mi tempus, volutpat neque sed, faucibus augue. Quisque quis vestibulum mi, ultricies gravida metus. Nam a orci dictum, dapibus purus quis, sollicitudin est. Vivamus quis elit et lacus tempor maximus a at orci.
+### Backend
+The backend api is built with Ktor, and uses Redis, MongoDB and the local file system for storage (yes I didn't know S3 existed back then).  
+It uses OpenApi (see [here](https://giuliopime.github.io/docs-drive-backend/) even though it's not great as it's missing tags and other stuff) for documentation and the whole thing was deployed on a simple Aruba VPS.
 
-Sed eu efficitur nisl, id viverra ipsum. Quisque volutpat vehicula libero, eu tincidunt ligula mattis at. Ut consectetur non odio quis egestas. Cras et metus sit amet quam dapibus commodo. Praesent tempus ex nec imperdiet elementum. Donec sit amet sagittis justo, sit amet eleifend sem. Ut dapibus egestas malesuada.
-
+### Frontend
+The frontend is an SSR NuxtJS v2 application.  

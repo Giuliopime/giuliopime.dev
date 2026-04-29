@@ -73,6 +73,8 @@ export default defineNuxtConfig({
           theme: 'gruvbox-dark-hard',
           langs: [
             'kotlin',
+              'swift',
+              'yaml'
           ]
         }
       }
