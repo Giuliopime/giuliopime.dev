@@ -6,11 +6,13 @@ const { data: project } = await useAsyncData(`project-${slug}`, () => {
   return queryCollection('projects').path(`/projects/${slug}`).first()
 })
 
+console.log(project.value?.description)
+
 useSeoMeta({
-  title: project.value?.title,
-  ogTitle: project.value?.title,
-  description: project.value?.description,
-  ogDescription: project.value?.description,
+  title: () => project.value?.title,
+  ogTitle: () => project.value?.title,
+  description: () => project.value?.description,
+  ogDescription: () => project.value?.description,
 })
 
 const { data: blogs } = await useAsyncData('blog-feed-list', () => {
