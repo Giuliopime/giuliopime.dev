@@ -3,7 +3,6 @@ const slug = useRoute().params.slug
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 	return queryCollection('blog')
       .path(`/blog/${slug}`)
-      .select('title', 'description', 'project', 'date')
       .first()
 })
 
