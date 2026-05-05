@@ -89,7 +89,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
       <div class="flex flex-col mt-10 lg:mt-0 px-2 lg:px-0">
         <span class="text-coral font-sohne text-xs mb-2">/ DESCRIPTION</span>
 
-        <ContentRenderer tag="article" :value="project" class="prose md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
+        <ContentRenderer tag="article" :value="project" class="prose text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
       </div>
     </div>
 
