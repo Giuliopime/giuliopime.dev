@@ -41,7 +41,13 @@ useSeoMeta({
 const { p, b, g, c, slash } = useMagicKeys({
   passive: false,
   onEventFired(e) {
-    if (e.type === 'keydown') e.preventDefault()
+    if (e.type !== 'keydown')
+      return
+
+    const handled = ['p', 'b', 'g', 'c', '/']
+    if (handled.includes(e.key.toLowerCase())) {
+      e.preventDefault()
+    }
   }
 })
 
