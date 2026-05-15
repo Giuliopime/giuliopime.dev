@@ -11,6 +11,7 @@ useSeoMeta({
   ogTitle: post.value?.title,
   description: post.value?.description,
   ogDescription: post.value?.description,
+  twitterDescription: post.value?.description,
   ogType: "article",
   articlePublishedTime: post.value?.date,
   articleAuthor: ['https://giuliopime.dev']

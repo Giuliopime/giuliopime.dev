@@ -13,6 +13,7 @@ useSeoMeta({
   ogTitle: () => project.value?.title,
   description: () => project.value?.description,
   ogDescription: () => project.value?.description,
+  twitterDescription: () => project.value?.description,
 })
 
 const { data: blogs } = await useAsyncData('blog-feed-list', () => {

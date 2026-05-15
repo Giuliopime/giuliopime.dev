@@ -3,7 +3,8 @@ useSeoMeta({
   title: "guides",
   ogTitle: "guides",
   description: "technical challenges I encountered and my process for solving them, documented",
-  ogDescription: "technical challenges I encountered and my process for solving them, documented"
+  ogDescription: "technical challenges I encountered and my process for solving them, documented",
+  twitterDescription: "technical challenges I encountered and my process for solving them, documented",
 })
 
 import DocumentsTable from "~/components/DocumentsTable.vue";

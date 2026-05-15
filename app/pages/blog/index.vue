@@ -3,7 +3,8 @@ useSeoMeta({
   title: "blog",
   ogTitle: "blog",
   description: "longer articles about things I'm interested in or experienced",
-  ogDescription: "longer articles about things I'm interested in or experienced"
+  ogDescription: "longer articles about things I'm interested in or experienced",
+  twitterDescription: "longer articles about things I'm interested in or experienced",
 })
 
 import DocumentsTable from "~/components/DocumentsTable.vue";
