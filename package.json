@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.7.1",
+    "@nuxt/content": "^3.13.0",
     "@nuxt/icon": "2.2.1",
     "@vueuse/nuxt": "14.2.1",
     "better-sqlite3": "^12.4.1",
