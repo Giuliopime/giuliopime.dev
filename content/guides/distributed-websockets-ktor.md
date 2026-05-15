@@ -1,7 +1,7 @@
 ---
 title: Distributed websocket architecture for real time data using Ktor
 description: Websockets are perfect to provide real time data to your app, especially when building features that involve collaboration between users. In this guide I go in depth on my websocket architecture that supports distributed systems such as k8s.
-date: 2026-05-12
+date: 2026-05-15
 project: index
 tags: [kotlin, backend]
 ---
