@@ -35,6 +35,7 @@ useSeoMeta({
   twitterDescription: "the place where I write about things I do or think.",
   twitterImage: "https://giuliopime.dev/pfp.png",
   twitterImageAlt: "my pfp",
+  twitterCard: "summary",
   themeColor: "#000000",
   appleMobileWebAppStatusBarStyle: "black-translucent"
 })
