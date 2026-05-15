@@ -23,7 +23,6 @@ useHeadSafe({
 })
 
 useSeoMeta({
-  description: "the place where I write about things I do or think.",
   ogType: "website",
   ogSiteName: "giuliopime.dev",
   ogTitle: "giuliopime.dev",
@@ -32,7 +31,6 @@ useSeoMeta({
   twitterSite: "@giuliopime",
   twitterCreator: "@giuliopime",
   twitterTitle: "giuliopime.dev",
-  twitterDescription: "the place where I write about things I do or think.",
   twitterImage: "https://giuliopime.dev/pfp.png",
   twitterImageAlt: "my pfp",
   twitterCard: "summary",

@@ -28,6 +28,13 @@
 <script setup lang="ts">
 import FeedTable from "~/components/FeedTable.vue";
 
+useSeoMeta({
+  title: "giuliopime.dev",
+  description: "the place where I write about things I do or think.",
+  ogDescription: "the place where I write about things I do or think.",
+  twitterDescription: "the place where I write about things I do or think.",
+})
+
 const { data: projects } = await useAsyncData('projects-feed-list', () => {
   return queryCollection('projects')
       .order('date', 'DESC')

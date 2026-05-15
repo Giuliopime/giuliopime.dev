@@ -9,6 +9,13 @@
 <script setup>
 import redirects from "~/assets/redirects.js";
 
+useSeoMeta({
+  title: "teleportation...",
+  description: "enter the farcaster portal 00",
+  ogDescription: "enter the farcaster portal 00",
+  twitterDescription: "enter the farcaster portal 00",
+})
+
 const route = useRoute();
 const redirect = redirects.find(r => r.id === route.params.redirect.toLowerCase())
 if (!redirect) {
