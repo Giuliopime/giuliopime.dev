@@ -7,9 +7,9 @@
 
       <!-- Header -->
       <slot name="header">
-        <span class="hidden sm:block font-thin text-coral py-2">/&thinsp;&thinsp;DATE</span>
-        <span class="font-thin text-coral py-2">/&thinsp;&thinsp;NAME</span>
-        <span class="font-thin text-coral py-2 justify-self-end sm:justify-self-auto">/&thinsp;&thinsp;TYPE</span>
+        <span class="hidden sm:block font-thin text-accent py-2">/&thinsp;&thinsp;DATE</span>
+        <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
+        <span class="font-thin text-accent py-2 justify-self-end sm:justify-self-auto">/&thinsp;&thinsp;TYPE</span>
       </slot>
       <div class="col-span-2 sm:col-span-3 border-b border-white/50"></div>
 
@@ -17,7 +17,7 @@
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
             :to="entry.path"
-            class="group col-span-2 sm:col-span-3 grid grid-cols-subgrid gap-x-8 hover:bg-sky hover:text-black cursor-pointer items-center h-[4.25rem] sm:h-12"
+            class="group col-span-2 sm:col-span-3 grid grid-cols-subgrid gap-x-8 hover:bg-clickable hover:text-black cursor-pointer items-center h-[4.25rem] sm:h-12"
         >
           <span class="hidden sm:block opacity-80 whitespace-nowrap">
             {{ new Date(entry.date).toLocaleDateString() }}

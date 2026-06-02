@@ -16,22 +16,49 @@
   font-display:swap;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --c-foreground: 0 0% 0%;
+  --c-background: 37 64% 95%;
+  --c-accent: 297 84% 53%;
+  --c-clickable: 204 92% 76%;
+}
+
+.dark {
+  --c-foreground: 0 0% 98%;
+  --c-background: 0 0% 0%;
+  --c-accent: 297 84% 53%;
+  --c-clickable: 181 97% 72%;
+}
 
 @layer base {
   html {
+    @apply bg-background text-foreground;
     font-family: "Trebuchet MS Custom", sans-serif;
-    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-    background-color: #000;
-    color: #FBFBFB;
     overscroll-behavior: none;
   }
+
+  #bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/axiom-pattern.png');
+    z-index: -1;
+  }
+
+  /*html.dark #bg-image {*/
+  /*  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');*/
+  /*}*/
 
   html, body, #__nuxt {
     @apply h-full w-full;
   }
 
   ::selection {
-    @apply bg-sky text-black;
+    @apply bg-clickable text-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -48,23 +75,23 @@
     @apply flex items-center;
   }
 
-  .button-sky {
-    @apply py-1 px-2 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black transition-all duration-200;
+  .button-clickable {
+    @apply py-1 px-2 bg-clickable/20 text-clickable hover:bg-clickable hover:text-black transition-all duration-200;
   }
-  .button-sky-active {
-    @apply py-1 px-2 bg-sky bg-opacity-100 text-black transition-all duration-200;
-  }
-
-  .button-coral {
-    @apply py-1 px-2 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  .button-clickable-active {
+    @apply py-1 px-2 bg-clickable text-black transition-all duration-200;
   }
 
-  .icon-button-sky {
-    @apply flex items-center justify-center py-1 px-1 bg-sky bg-opacity-20 text-sky hover:bg-opacity-100 hover:text-black;
+  .button-accent {
+    @apply py-1 px-2 bg-accent/20 text-accent hover:bg-accent hover:text-black;
   }
 
-  .icon-button-coral {
-    @apply flex items-center justify-center py-1 px-1 bg-coral bg-opacity-20 text-coral hover:bg-opacity-100 hover:text-black;
+  .icon-button-clickable {
+    @apply flex items-center justify-center py-1 px-1 bg-clickable/20 text-clickable hover:bg-clickable hover:text-black;
+  }
+
+  .icon-button-accent {
+    @apply flex items-center justify-center py-1 px-1 bg-accent/20 text-accent hover:bg-accent hover:text-black;
   }
 
   .type-badge {

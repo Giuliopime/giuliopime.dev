@@ -9,7 +9,7 @@
 <style scoped>
 @keyframes wave {
 	0%, 33%, 100% { color: currentColor; }
-	0%, 33% { color: #E220EC; } /* Tailwind coral equivalent */
+	0%, 33% { color: #E220EC; } /* Tailwind accent equivalent */
 }
 
 .arrow {

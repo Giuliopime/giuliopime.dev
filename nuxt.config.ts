@@ -4,13 +4,24 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/icon', '@vueuse/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    '@nuxt/icon',
+    '@vueuse/nuxt',
+    '@nuxtjs/color-mode'
+  ],
 
   tailwindcss: {
     cssPath: [`./app/assets/css/tailwind.css`, { injectPosition: "first" }],
     config: {},
     viewer: true,
     exposeConfig: false,
+  },
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark', // fallback value if not system preference found
   },
 
   nitro: {

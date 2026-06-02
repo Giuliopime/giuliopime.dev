@@ -6,14 +6,14 @@
     <div class="grid grid-cols-[auto_1fr] gap-x-8">
 
       <!-- Header -->
-      <span class="font-thin text-coral py-2">/&thinsp;&thinsp;{{ major ? 'MAJOR' : 'MINOR' }}</span>
+      <span class="font-thin text-accent py-2">/&thinsp;&thinsp;{{ major ? 'MAJOR' : 'MINOR' }}</span>
       <div class="col-span-2 border-b border-white/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
             :to="entry.path"
-            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-sky hover:text-black cursor-pointer py-3 items-start"
+            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer py-3 items-start"
         >
           <span class="opacity-80 whitespace-nowrap pt-0.5">
             {{ new Date(entry.date).toLocaleDateString() }}

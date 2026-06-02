@@ -15,7 +15,7 @@
       <p class="mt-8 mb-0.5">
         If you are tight on time
       </p>
-      <nuxt-link to="/cv_pimenoff_verdolin_giulio.pdf" target="_blank" class="button-sky text-xs">
+      <nuxt-link to="/cv_pimenoff_verdolin_giulio.pdf" target="_blank" class="button-clickable text-xs">
         DOWNLOAD MY CV
       </nuxt-link>
     </div>

@@ -14,6 +14,9 @@ importers:
       '@nuxt/icon':
         specifier: 2.2.1
         version: 2.2.1(magicast@0.3.5)(vite@7.1.8(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.9.0))(vue@3.5.22(typescript@5.9.3))
+      '@nuxtjs/color-mode':
+        specifier: 4.0.0
+        version: 4.0.0(magicast@0.3.5)
       '@vueuse/nuxt':
         specifier: 14.2.1
         version: 14.2.1(magicast@0.3.5)(nuxt@4.1.2(@parcel/watcher@2.5.1)(@vue/compiler-sfc@3.5.22)(better-sqlite3@12.4.1)(db0@0.3.4(better-sqlite3@12.4.1))(ioredis@5.8.0)(lightningcss@1.32.0)(magicast@0.3.5)(rollup@4.52.3)(terser@5.44.0)(typescript@5.9.3)(vite@7.1.8(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.44.0)(yaml@2.9.0))(yaml@2.9.0))(vue@3.5.22(typescript@5.9.3))
@@ -518,6 +521,9 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vue: ^3.3.4
+
+  '@nuxtjs/color-mode@4.0.0':
+    resolution: {integrity: sha512-xyaVR/TPLdMuRa2VOgH6b75jvmFEsn9QKL6ISldaAw38ooFJfWY1ts2F3ye43wcT/goCbcuvPuskF2f8yUZhlw==}
 
   '@nuxtjs/mdc@0.21.1':
     resolution: {integrity: sha512-DIeUD7IahWVUSoZExysxH9dX51Io6hcQYgGJODq0cMTGqaoDD32lRfHBJxYUmy+sUCV1+1hfa2ixspgJgEd2GA==}
@@ -5351,6 +5357,16 @@ snapshots:
       - vti
       - vue-tsc
       - yaml
+
+  '@nuxtjs/color-mode@4.0.0(magicast@0.3.5)':
+    dependencies:
+      '@nuxt/kit': 4.4.2(magicast@0.3.5)
+      exsolve: 1.0.8
+      pathe: 2.0.3
+      pkg-types: 2.3.0
+      semver: 7.7.4
+    transitivePeerDependencies:
+      - magicast
 
   '@nuxtjs/mdc@0.21.1(magicast@0.3.5)':
     dependencies:

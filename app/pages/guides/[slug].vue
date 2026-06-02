@@ -39,13 +39,13 @@ const relatedProject = computed(() => {
     <ContentRenderer tag="article" :value="post" class="prose text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
 
     <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem]" v-if="relatedProject">
-      <span class="text-coral font-sohne text-xs py-2">/ RELATED-PROJECT</span>
+      <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
 
       <div class="grid grid-cols-[1fr_auto] gap-x-8">
         <div class="col-span-2 border-b border-white/50"></div>
         <nuxt-link
             :to="relatedProject.path"
-            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-sky hover:text-black cursor-pointer py-3 items-start"
+            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer py-3 items-start"
         >
             <span class="hidden sm:block opacity-80 whitespace-nowrap">
               {{ new Date(relatedProject.date).toLocaleDateString() }}

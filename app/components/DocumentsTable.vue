@@ -6,15 +6,15 @@
     <div class="grid grid-cols-[auto_1fr] gap-x-8">
 
       <!-- Header -->
-      <span class="font-thin text-coral py-2">/&thinsp;&thinsp;DATE</span>
-      <span class="font-thin text-coral py-2">/&thinsp;&thinsp;NAME</span>
+      <span class="font-thin text-accent py-2">/&thinsp;&thinsp;DATE</span>
+      <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
       <div class="col-span-2 border-b border-white/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
             :to="entry.path"
-            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-sky hover:text-black cursor-pointer items-center h-12"
+            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer items-center h-12"
         >
           <span class="opacity-80 whitespace-nowrap">
             {{ new Date(entry.date).toLocaleDateString() }}
