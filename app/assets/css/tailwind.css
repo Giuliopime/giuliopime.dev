@@ -51,9 +51,8 @@
     z-index: -1;
   }
 
-  /*html.dark #bg-image {*/
-  /*  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');*/
-  /*}*/
+  /*another pattern for dark: https://www.transparenttextures.com/patterns/dark-mosaic.png*/
+  /*html.dark #bg-image {}*/
 
   html, body, #__nuxt {
     @apply h-full w-full;
