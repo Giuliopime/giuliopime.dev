@@ -10,10 +10,16 @@
     </div>
 
     <div class="vert-center gap-1 justify-self-end">
-      <a href="mailto:ping@giuliopime.dev" class="button-clickable"><span class="hidden sm:inline mr-1">[C]</span>CONTACT</a>
+      <a href="mailto:ping@giuliopime.dev" class="button-clickable hidden sm:inline"><span class="hidden sm:inline mr-1">[C]</span>CONTACT</a>
+      <a href="mailto:ping@giuliopime.dev" class="icon-button-clickable sm:hidden">
+        <Icon name="pixelarticons:mail" class="text-base" />
+      </a>
       <nuxt-link to="/github" target="_blank" class="icon-button-clickable" tabindex="1">
         <Icon name="pixelarticons:github" class="text-base" />
       </nuxt-link>
+      <button @click="$colorMode.preference = $colorMode.value == 'dark' ? 'light' : 'dark'" class="icon-button-clickable" tabindex="2">
+        <Icon :name="$colorMode.value == 'dark' ? 'pixelarticons:sun' : 'pixelarticons:moon'" class="text-base" />
+      </button>
     </div>
   </div>
 </template>
@@ -38,6 +44,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
+const colorMode = useColorMode()
 
 const navbarContainer = ref<HTMLElement | null>(null)
 const { y } = useWindowScroll()
