@@ -30,17 +30,17 @@ const relatedProject = computed(() => {
 </script>
 
 <template>
-	<div class="pt-20 flex flex-col items-center w-full pb-96 px-4">
-		<div class="flex flex-col gap-8 max-w-[950px] py-20 text-center">
+	<div class="pt-20 flex flex-col items-center w-full pb-96">
+		<div class="flex flex-col gap-8 max-w-[950px] py-20 text-center px-4">
 			<b class="text-4xl md:text-6xl">{{ post.title }}</b>
 			<span>{{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
 		</div>
 
-    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16">
+    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16 px-4">
       <ContentRenderer tag="article" :value="post" class="prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
     </div>
 
-    <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem]" v-if="relatedProject">
+    <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem] px-4 " v-if="relatedProject">
       <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
 
       <div class="grid grid-cols-[1fr_auto] gap-x-8">
