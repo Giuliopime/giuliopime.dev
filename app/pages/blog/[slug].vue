@@ -31,12 +31,14 @@ const relatedProject = computed(() => {
 
 <template>
 	<div class="pt-20 flex flex-col items-center w-full pb-96 px-4">
-		<div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-border px-4 py-2">
-			<b>{{ post.title }}</b>
-			<span class="self-end md:self-start">· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
+		<div class="flex flex-col gap-8 max-w-[950px] py-20 text-center">
+			<b class="text-4xl md:text-6xl">{{ post.title }}</b>
+			<span>{{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
 		</div>
 
-    <ContentRenderer tag="article" :value="post" class="prose dark:text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
+    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16">
+      <ContentRenderer tag="article" :value="post" class="prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
+    </div>
 
     <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem]" v-if="relatedProject">
       <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
