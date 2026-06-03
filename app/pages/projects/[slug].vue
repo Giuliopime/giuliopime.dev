@@ -56,7 +56,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
 
 </script>
 <template>
-  <div class="flex flex-col pt-32 w-full items-center text-sm">
+  <div class="flex flex-col pt-32 w-full items-center text-sm bg-background/50">
     <div class="flex flex-col lg:flex-row gap-x-8 w-full justify-center items-center lg:items-start">
       <div class="flex flex-col w-full px-2 lg:px-0 max-w-[90ch] lg:w-1/4 xl:w-96 font-sohne">
         <span class="text-accent text-xs">/ METADATA</span>
@@ -78,7 +78,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
           <span>links:</span>
           <div class="flex flex-wrap gap-x-2 gap-y-2 col-span- py-1 justify-end">
             <template v-for="link in project.links" :key="link.url">
-              <a :href="link.url" target="_blank" class="button-accent hover:text-white text-xs">
+              <a :href="link.url" target="_blank" class="button-accent dark:bg-accent/10 hover:text-white text-xs">
                 {{ link.title.toUpperCase() }}
               </a>
             </template>
