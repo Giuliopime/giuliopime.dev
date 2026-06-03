@@ -31,18 +31,18 @@ const relatedProject = computed(() => {
 
 <template>
   <div class="pt-20 flex flex-col items-center w-full pb-96 px-4">
-    <div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-white px-4 py-2">
+    <div class="flex flex-col md:flex-row gap-4 mb-8 text-lg border border-border px-4 py-2">
       <b>{{ post.title }}</b>
       <span class="self-end md:self-start">· {{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
     </div>
 
-    <ContentRenderer tag="article" :value="post" class="prose text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
+    <ContentRenderer tag="article" :value="post" class="prose dark:text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
 
     <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem]" v-if="relatedProject">
       <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
 
       <div class="grid grid-cols-[1fr_auto] gap-x-8">
-        <div class="col-span-2 border-b border-white/50"></div>
+        <div class="col-span-2 border-b border-border/50"></div>
         <nuxt-link
             :to="relatedProject.path"
             class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer py-3 items-start"
@@ -55,7 +55,7 @@ const relatedProject = computed(() => {
             <span class="line-clamp-3 sm:line-clamp-2 leading-snug opacity-75">{{ relatedProject.description }}</span>
           </div>
         </nuxt-link>
-        <div class="col-span-2 border-b border-white/50"></div>
+        <div class="col-span-2 border-b border-border/50"></div>
       </div>
     </div>
   </div>

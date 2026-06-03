@@ -11,7 +11,7 @@
         <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
         <span class="font-thin text-accent py-2 justify-self-end sm:justify-self-auto">/&thinsp;&thinsp;TYPE</span>
       </slot>
-      <div class="col-span-2 sm:col-span-3 border-b border-white/50"></div>
+      <div class="col-span-2 sm:col-span-3 border-b border-border/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -34,7 +34,7 @@
             </span>
           </span>
         </nuxt-link>
-        <div class="col-span-2 sm:col-span-3 border-b border-white/50"></div>
+        <div class="col-span-2 sm:col-span-3 border-b border-border/50"></div>
       </template>
 
     </div>

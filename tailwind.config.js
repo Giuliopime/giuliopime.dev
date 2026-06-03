@@ -7,6 +7,7 @@ export default {
         foreground: "hsl(var(--c-foreground) / <alpha-value>)",
         accent: "hsl(var(--c-accent) / <alpha-value>)",
         clickable: "hsl(var(--c-clickable) / <alpha-value>)",
+        border: "hsl(var(--c-border) / <alpha-value>)",
       },
       fontFamily: {
         sohne: ['sohne-mono']

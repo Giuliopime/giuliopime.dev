@@ -8,7 +8,7 @@
       <!-- Header -->
       <span class="font-thin text-accent py-2">/&thinsp;&thinsp;DATE</span>
       <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
-      <div class="col-span-2 border-b border-white/50"></div>
+      <div class="col-span-2 border-b border-border/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -21,7 +21,7 @@
           </span>
           <span class="line-clamp-2 pr-4 sm:pr-8">{{ entry.title }}</span>
         </nuxt-link>
-        <div class="col-span-2 border-b border-white/50"></div>
+        <div class="col-span-2 border-b border-border/50"></div>
       </template>
 
     </div>

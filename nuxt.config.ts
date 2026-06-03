@@ -20,8 +20,7 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'system', // default value of $colorMode.preference
-    fallback: 'dark', // fallback value if not system preference found
+    preference: 'dark',
   },
 
   nitro: {

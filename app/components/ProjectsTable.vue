@@ -7,7 +7,7 @@
 
       <!-- Header -->
       <span class="font-thin text-accent py-2">/&thinsp;&thinsp;{{ major ? 'MAJOR' : 'MINOR' }}</span>
-      <div class="col-span-2 border-b border-white/50"></div>
+      <div class="col-span-2 border-b border-border/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -32,7 +32,7 @@
 <!--            </div>-->
           </div>
         </nuxt-link>
-        <div class="col-span-2 border-b border-white/50"></div>
+        <div class="col-span-2 border-b border-border/50"></div>
       </template>
 
     </div>
