@@ -58,7 +58,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
 <template>
   <div class="flex flex-col pt-32 w-full items-center text-sm bg-background/50">
     <div class="flex flex-col lg:flex-row gap-x-8 w-full justify-center items-center lg:items-start">
-      <div class="flex flex-col w-full px-2 lg:px-0 max-w-[90ch] lg:w-1/4 xl:w-96 font-sohne">
+      <div class="flex flex-col w-full px-2 lg:px-0 max-w-[90ch] lg:w-1/4 xl:w-96 font-sohne lg:sticky lg:top-24">
         <span class="text-accent text-xs">/ METADATA</span>
         <hr class="my-2 opacity-80 border-border">
         <div class="grid grid-cols-[auto_1fr] items-center gap-y-2 gap-x-4 opacity-80">

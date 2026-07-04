@@ -30,6 +30,12 @@ export default defineNuxtConfig({
     }
   },
 
+  vite: {
+    optimizeDeps: {
+      include: []
+    }
+  },
+
   content: {
     build: {
       markdown: {
