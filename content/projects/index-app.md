@@ -54,9 +54,17 @@ That is now complete and available on the [App Store](https://apps.apple.com/it/
 - real-time updates via websockets, useful for shared lists
 - yes shared lists too
 
-Here are some screenshots from the app:  
+Here are some screenshots and demos from the app:  
 ![index_ios_screens_1](/img/blog/index/ios_screens_1.png)
 ![index_ios_screens_2](/img/blog/index/ios_screens_2.png)
+
+Data gets updated in real time on different devices and for different users:  
+![websocket_sync_demo.gif](/img/blog/index/websocket_sync_demo.gif)  
+
+And here are some widgets and shortcuts!  
+![index_ios_lock_screen_widgets](/img/blog/index/lock_screen_widgets.png)
+![index_ios_home_widgets](/img/blog/index/home_widgets.png)
+![index_ios_shortcuts](/img/blog/index/shortcuts.png)
 
 I'm now onto building a minimal web-app, but I don't know how long that'll take as I got a bit burned out with this particular project, it required a lot of effort and seen the current market for those kind of apps, not a lot of feedback from the end users.  
 Maybe it will be my playground for agentic coding who knows.  
