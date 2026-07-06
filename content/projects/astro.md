@@ -12,7 +12,7 @@ links: [
 ---
 Astro has been my first project, and unexpectedly also really successful.  
 
-Currently used by ~10k users per day, this has been the project that thanks to its challenges teached me most of what I know about programming.  
+Currently used by ~10k users per day, this has been the project that thanks to its challenges taught me most of what I know about programming.  
 
 It's a simple Discord bot that adds to your server temporary voice channels, which was a popular feature in TeakSpeak that Discord didn't copy for some reason.     
 
@@ -32,4 +32,4 @@ That is built in Nuxt and I'm really proud of the UX/UI that I came up with (too
 
 You can find the source code of the [backend](https://github.com/bot-astro/astro), [frontend](https://github.com/bot-astro/astro-bot.space) and [IaC](https://github.com/Giuliopime/gport) on [GitHub](https://github.com/bot-astro).  
 
-For a fully story of the project instead check the related article below!
+For a fully story of the project instead check the related article!

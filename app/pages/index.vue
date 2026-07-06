@@ -20,7 +20,7 @@
       </nuxt-link>
     </div>
 
-    <FeedTable :feed="feed" />
+    <FeedTable :feed="feed" class="mt-20 sm:max-w-[600px] px-2" />
 
   </div>
 </template>

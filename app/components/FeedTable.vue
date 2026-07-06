@@ -1,6 +1,6 @@
 <template>
   <div
-      class="mt-20 w-full sm:max-w-[600px] px-2 text-xs font-sohne tracking-tight"
+      class="w-full text-xs font-sohne tracking-tight"
       :tabindex="tabindex"
   >
     <div class="grid grid-cols-[1fr_auto] sm:grid-cols-[auto_1fr_auto] gap-x-8">

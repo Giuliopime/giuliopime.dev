@@ -57,49 +57,50 @@ const relatedArticles = computed<FeedEntry[]>(() => {
 </script>
 <template>
   <div class="flex flex-col pt-32 w-full items-center text-sm bg-background/50">
-    <div class="flex flex-col lg:flex-row gap-x-8 w-full justify-center items-center lg:items-start">
-      <div class="flex flex-col w-full px-2 lg:px-0 max-w-[90ch] lg:w-1/4 xl:w-96 font-sohne lg:sticky lg:top-24">
-        <span class="text-accent text-xs">/ METADATA</span>
-        <hr class="my-2 opacity-80 border-border">
-        <div class="grid grid-cols-[auto_1fr] items-center gap-y-2 gap-x-4 opacity-80">
-          <span>name:</span>
-          <span class="text-right">{{ project.title }}</span>
-          <hr class="opacity-20 col-span-2 border-border" />
-          <span>release date:</span>
-          <span class="text-right">{{ new Date(project.date).toLocaleDateString() }}</span>
-<!--          <hr class="opacity-20 col-span-2" />-->
-<!--          <span>tags:</span>-->
-<!--          <div v-if="project.tags?.length" class="flex flex-wrap gap-1">-->
-<!--            <span v-for="tag in project.tags" :key="tag" class="opacity-70 border border-current px-1 rounded-sm text-[0.65rem]">-->
-<!--              {{ tag }}-->
-<!--            </span>-->
-<!--          </div>-->
-          <hr class="opacity-20 col-span-2 border-border" />
-          <span>links:</span>
-          <div class="flex flex-wrap gap-x-2 gap-y-2 col-span- py-1 justify-end">
-            <template v-for="link in project.links" :key="link.url">
-              <a :href="link.url" target="_blank" class="button-accent dark:bg-accent/10 hover:text-white text-xs">
-                {{ link.title.toUpperCase() }}
-              </a>
-            </template>
-          </div>
-          <hr class="opacity-20 col-span-2 border-border" />
-        </div>
-      </div>
+    <div class="flex flex-col gap-x-8 w-full justify-center items-center">
 
-      <div class="flex flex-col mt-10 lg:mt-0 px-2 lg:px-0">
+      <div class="flex flex-col px-2 lg:px-0">
+        <div class="flex flex-col w-full font-sohne mb-10">
+          <span class="text-accent text-xs">/ METADATA</span>
+          <hr class="my-2 opacity-80 border-border">
+          <div class="grid grid-cols-[auto_1fr] items-center gap-y-2 gap-x-4 opacity-80">
+            <span>name:</span>
+            <span class="text-right">{{ project.title }}</span>
+            <hr class="opacity-20 col-span-2 border-border" />
+            <span>release date:</span>
+            <span class="text-right">{{ new Date(project.date).toLocaleDateString() }}</span>
+            <!--          <hr class="opacity-20 col-span-2" />-->
+            <!--          <span>tags:</span>-->
+            <!--          <div v-if="project.tags?.length" class="flex flex-wrap gap-1">-->
+            <!--            <span v-for="tag in project.tags" :key="tag" class="opacity-70 border border-current px-1 rounded-sm text-[0.65rem]">-->
+            <!--              {{ tag }}-->
+            <!--            </span>-->
+            <!--          </div>-->
+            <hr class="opacity-20 col-span-2 border-border" />
+            <span>links:</span>
+            <div class="flex flex-wrap gap-x-2 gap-y-2 col-span- py-1 justify-end">
+              <template v-for="link in project.links" :key="link.url">
+                <a :href="link.url" target="_blank" class="button-accent dark:bg-accent/10 hover:text-white text-xs">
+                  {{ link.title.toUpperCase() }}
+                </a>
+              </template>
+            </div>
+            <hr class="opacity-20 col-span-2 border-border" />
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-start mb-12 w-full" v-if="relatedArticles.length">
+          <FeedTable :feed="relatedArticles">
+            <template #header>
+              <span class="text-accent font-sohne text-xs py-2">/ RELATED-ARTICLES</span>
+            </template>
+          </FeedTable>
+        </div>
+
         <span class="text-accent font-sohne text-xs mb-2">/ DESCRIPTION</span>
 
         <ContentRenderer tag="article" :value="project" class="prose dark:text-gray-100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
       </div>
-    </div>
-
-    <div class="flex flex-col justify-start" v-if="relatedArticles.length">
-      <FeedTable :feed="relatedArticles">
-        <template #header>
-          <span class="text-accent font-sohne text-xs py-2">/ RELATED-ARTICLES</span>
-        </template>
-      </FeedTable>
     </div>
   </div>
 </template>

@@ -16,4 +16,8 @@ As an example, when a friend sends you a Spotify link, you can share it with the
 It's built fully in SwiftUI, using SwiftData for the storage layer.  
 The hardest bit has been doing the onboarding screen to illustrate how to use the app from the system share sheet.  
 
-The minimal website is plain html & css.
+<div class="flex justify-center">
+    <img src="/img/blog/crossfade/crossfade_intro.mp4" alt="crossfade onboarding" width="312"/>
+</div>
+
+The minimal [website](https://crossfade.giuliopime.dev) is plain html & css.
