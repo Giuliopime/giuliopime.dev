@@ -50,10 +50,14 @@ b) add some sort of global websocket events manager to synchronize all pods on t
 
 option `a` in my case doesn't hold because of the collaborative list feature, two different users might need to receive the same events because they have a shared list together + it is very impractical to make user a user gets always connected to the same pod.  
 
+the solution I came up with is using a message broker, RabbitMQ in my case, to centralize all the events between pods.  
+Here is the high level overview of my solution:
+<div class="flex justify-center">
+    <img src="/img/blog/index/websocket_architecture.png" alt="Websocket architecture diagram" />
+</div>
+
 
 ### storing the websocket sessions
-the solution I came up with is using a message broker, RabbitMQ in my case, to centralize all the events between pods.
-
 Let's start from the root, let's configure the websocket plugin for the Ktor server:
 ```kotlin
 fun Application.configureWebsockets() {
