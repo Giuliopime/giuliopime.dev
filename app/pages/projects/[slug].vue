@@ -6,8 +6,6 @@ const { data: project } = await useAsyncData(`project-${slug}`, () => {
   return queryCollection('projects').path(`/projects/${slug}`).first()
 })
 
-console.log(project.value?.description)
-
 useSeoMeta({
   title: () => project.value?.title,
   ogTitle: () => project.value?.title,
@@ -16,14 +14,14 @@ useSeoMeta({
   twitterDescription: () => project.value?.description,
 })
 
-const { data: blogs } = await useAsyncData('blog-feed-list', () => {
+const { data: blogs } = await useAsyncData('blog-feed-list-project', () => {
   return queryCollection('blog')
       .order('date', 'DESC')
       .select('title', 'date', 'path', 'project')
       .all()
 })
 
-const { data: guides } = await useAsyncData('guides-feed-list', () => {
+const { data: guides } = await useAsyncData('guides-feed-list-project', () => {
   return queryCollection('guides')
       .order('date', 'DESC')
       .select('title', 'date', 'path', 'project')
