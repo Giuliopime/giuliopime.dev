@@ -38,10 +38,12 @@ useSeoMeta({
   appleMobileWebAppStatusBarStyle: "black-translucent"
 })
 
-const { p, b, g, c, slash } = useMagicKeys({
+const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
   passive: false,
   onEventFired(e) {
     if (e.type !== 'keydown')
+      return
+	if (e.metaKey || e.ctrlKey || e.altKey)
       return
 
     const handled = ['p', 'b', 'g', 'c', '/']
@@ -51,9 +53,9 @@ const { p, b, g, c, slash } = useMagicKeys({
   }
 })
 
-watch(p, (pressed) => { if (pressed) router.push('/projects') })
-watch(b, (pressed) => { if (pressed) router.push('/blog') })
-watch(g, (pressed) => { if (pressed) router.push('/guides') })
-watch(c, (pressed) => { if (pressed) navigateTo('mailto:ping@giuliopime.dev', { external: true }) })
+watch(p, (pressed) => { if (pressed && !ctrl.value && !meta.value) router.push('/projects') })
+watch(b, (pressed) => { if (pressed && !ctrl.value && !meta.value) router.push('/blog') })
+watch(g, (pressed) => { if (pressed && !ctrl.value && !meta.value) router.push('/guides') })
+watch(c, (pressed) => { if (pressed && !ctrl.value && !meta.value) navigateTo('mailto:ping@giuliopime.dev', { external: true }) })
 watch(slash, (pressed) => { if (pressed) router.push('/') })
 </script>
