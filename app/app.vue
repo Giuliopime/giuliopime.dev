@@ -43,7 +43,7 @@ const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
   onEventFired(e) {
     if (e.type !== 'keydown')
       return
-	if (e.metaKey || e.ctrlKey || e.altKey)
+	  if (e.metaKey || e.ctrlKey || e.altKey)
       return
 
     const handled = ['p', 'b', 'g', 'c', '/']
