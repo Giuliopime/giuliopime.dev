@@ -8,33 +8,39 @@ interface TocLink {
 defineProps<{
   links: TocLink[]
 }>()
+
+const letter = (index: number) => String.fromCharCode(97 + index)
 </script>
 
 <template>
-  <ol class="list-decimal list-inside space-y-3">
+  <ol class="space-y-3">
     <li
-        v-for="link in links"
+        v-for="(link, index) in links"
         :key="link.id"
+        class="list-none"
     >
       <a
           :href="`#${link.id}`"
-          class="underline hover:no-underline"
+          class="inline-flex gap-1 underline hover:no-underline"
       >
+        <span>{{ index + 1 }}.</span>
         {{ link.text }}
       </a>
 
       <ol
           v-if="link.children?.length"
-          class="list-[lower-alpha] list-inside pl-6 mt-2 space-y-1"
+          class="mt-2 space-y-1 pl-6"
       >
         <li
-            v-for="child in link.children"
+            v-for="(child, childIndex) in link.children"
             :key="child.id"
+            class="list-none"
         >
           <a
               :href="`#${child.id}`"
-              class="underline hover:no-underline"
+              class="inline-flex gap-1 underline hover:no-underline"
           >
+            <span>{{ letter(childIndex) }}.</span>
             {{ child.text }}
           </a>
         </li>
