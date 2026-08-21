@@ -9,8 +9,6 @@ audio: https://open.spotify.com/track/3aABdPd96JkyvI9ZmHPLIZ?si=f9e1dd90e91444e5
 
 ![play_de_garcey.png](/img/blog/pointbreak/playa_de_garcey.jpg){.wide}
 
-<div class="text-center">. . .</div>
-
 It's the last day of June, I'm sitting inside a yellow Kangoo in front of Playa el Jablito.  
 June is always an interesting month, I think it's the summer energy that makes us question a lot of things, as for me the most frequent question I had for the past weeks was "why?".
 
