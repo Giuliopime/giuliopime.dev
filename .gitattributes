@@ -1,3 +1,4 @@
+*.mp4 filter=lfs diff=lfs merge=lfs -text
 public/vids/blog/pointbreak/ciutad_sin_sueno.mp4 filter=lfs diff=lfs merge=lfs -text
 public/vids/blog/pointbreak/dream_is_destiny.mp4 filter=lfs diff=lfs merge=lfs -text
 public/vids/blog/pointbreak/to_say_yes_to_one_instance.mp4 filter=lfs diff=lfs merge=lfs -text
