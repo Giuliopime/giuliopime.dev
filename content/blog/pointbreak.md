@@ -54,7 +54,7 @@ After coming back from Fuerteventura and talking with my friends, of course I co
 I know what you are saying while reading this "ah dude it's just two exams just take them, get that degree and don't think about it anymore". To be completely fair, I would feel literally ashamed if I finished my degree, as it would mean not having the guts to make my own choices, which is the point of all of this.
 To explain this so that you understand what I mean, we gotta dive a bit deeper...
 
-<div class="text-center">...</div>
+<div class="text-center">. . .</div>
 
 The quote I mentioned earlier about meeting other people is from the film _Waking Life_ by Richard Linklater. That movie is fascinating, and it's thanks to it if I'm writing, and thinking, all of this.
 
