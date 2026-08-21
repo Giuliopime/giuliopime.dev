@@ -108,7 +108,26 @@
     @apply flex items-center justify-center py-1 px-1 bg-accent/20 text-accent hover:bg-accent hover:text-black;
   }
 
+  .button-minimal {
+    @apply hover:opacity-70;
+  }
+
   .type-badge {
     @apply border border-border/50 py-0.5 px-1 uppercase text-foreground/80;
+  }
+}
+
+/* outside @layer so doesn't get stripped out because it's not used in .vue files */
+.prose .wide {
+  width: min(100vw - 2rem, 70rem);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1000px) {
+  .prose .wide {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
 }

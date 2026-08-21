@@ -1,6 +1,6 @@
 ---
-title: So I built a Discord bot
-description: Story and lessons from building a Discord bot that reached 150k servers
+title: Story and lessons from building a Discord bot that reached 150k servers
+description: I built a Discord bot :)
 date: 2025-10-09
 project: astro
 tags: [project, dev]

@@ -33,15 +33,21 @@ const relatedProject = computed(() => {
 
 <template>
 	<div class="pt-20 flex flex-col items-center w-full pb-96">
-		<div class="flex flex-col gap-8 max-w-[950px] py-20 text-center px-4">
-			<b class="text-4xl md:text-6xl">{{ post.title }}</b>
-			<span>{{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
+		<div class="flex flex-col max-w-[950px] py-20 text-center px-4">
+			<b class="text-4xl md:text-6xl pb-8">{{ post.title }}</b>
+			<div class="flex items-center justify-center gap-2 pb-3">
+        <span>{{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
+      </div>
+      <a :href="post.audio" target="_blank" class="button-minimal inline-flex items-center justify-center">
+        <Icon name="pixelarticons:music" class="text-lg" />
+      </a>
+
 		</div>
 
-    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16 pb-8 px-4 gap-x-10">
-      <div class="hidden lg:block flex-1" />
-      <ContentRenderer tag="article" :value="post" class="w-full prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose w-full min-w-0" />
-      <div class="hidden lg:block flex-1">
+    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16 pb-32 px-4 gap-x-10">
+      <div class="hidden lg:block flex-1" v-if="!post.hideToc" />
+      <ContentRenderer tag="article" :value="post" class="w-full prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose min-w-0" />
+      <div class="hidden lg:block flex-1" v-if="!post.hideToc">
         <div class="self-start sticky top-16 text-sm leading-4 opacity-80">
           <TableOfContents :links="post.body?.toc?.links ?? []" />
         </div>

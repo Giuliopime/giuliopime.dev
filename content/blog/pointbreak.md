@@ -3,11 +3,13 @@ title: Pointbreak
 description: Dream is destiny... someone said
 date: 2026-08-21
 tags: [life]
+hideToc: true
+audio: https://open.spotify.com/track/3aABdPd96JkyvI9ZmHPLIZ?si=f9e1dd90e91444e5
 ---
 
-![play_de_garcey.png](/img/blog/pointbreak/playa_de_garcey.jpg)
+![play_de_garcey.png](/img/blog/pointbreak/playa_de_garcey.jpg){.wide}
 
-## ‎
+<div class="text-center">. . .</div>
 
 It's the last day of June, I'm sitting inside a yellow Kangoo in front of Playa el Jablito.  
 June is always an interesting month, I think it's the summer energy that makes us question a lot of things, as for me the most frequent question I had for the past weeks was "why?".
@@ -26,7 +28,7 @@ When I say that I'm becoming more tech-averse it's because I see and experience 
 You know the deal, people scrolling instead of talking to each other, comparing themselves everyday even in the smallest matters, getting their personality stripped away, the economy going crazy, the performative illness that is being spread through social media, the extremely high expectations towards life and relationships.  
 I don't wanna be a contributor of this replacement of human experiences, hence is there even space for my skills given that premise?
 
-## ‎
+<div class="text-center">. . .</div>
 
 Here was me and my thoughts, sitting in front of that fishing village where people live in roulettes and small white squared houses, two exams left to take in university, a remote-first well-paying job and just a strong desire to discard all of it.
 
@@ -38,7 +40,7 @@ The latter was possible because I spent the past two months in a coliving in Fue
 That's what actually unexpectedly happened in that coliving, so many people passed by, sharing their experiences, opinions, views and perspectives.  
 I've got the chance to see that many different lives being lived, and there is no chance for you not to get moved by such environment.
 
-## ‎
+<div class="text-center">. . .</div>
 
 I luckily managed to see my life from a third-person perspective.
 University has always threw me off, I've always been against the computer science academic environment. I'm not gonna go into details here, but I'm just gonna link [two](https://youtu.be/g21IW7O5WHU?si=Dag8soquF6YqnQam&t=1234) [videos](https://youtu.be/5K_UAowTszU?si=mVpiLr44iiPHkzZm&t=86) that sums it up pretty well. But I never really stopped and listened to my thoughts for too long, it never really sunk in the fact that it wasn't the right path for me, it was only very recently after basically 4 years that I had the realization and it's probably thanks to the job I got.
@@ -52,7 +54,7 @@ After coming back from Fuerteventura and talking with my friends, of course I co
 I know what you are saying while reading this "ah dude it's just two exams just take them, get that degree and don't think about it anymore". To be completely fair, I would feel literally ashamed if I finished my degree, as it would mean not having the guts to make my own choices, which is the point of all of this.
 To explain this so that you understand what I mean, we gotta dive a bit deeper...
 
-## ‎
+<div class="text-center">...</div>
 
 The quote I mentioned earlier about meeting other people is from the film _Waking Life_ by Richard Linklater. That movie is fascinating, and it's thanks to it if I'm writing, and thinking, all of this.
 
@@ -77,7 +79,7 @@ It enlightens me to think that responsibility is concrete. Even if we are 8 bill
 When put into practice though, one thing usually hits you really quick: fear.
 Because freedom is scary, choosing implies responsibility and more than anything risk. Being autonomous is destabilizing. The solution, is to act despite uncertainty, which is inevitable.
 
-## ‎
+<div class="text-center">. . .</div>
 
 It's when you assimilate these concepts fully and you embrace this freedom and the responsibility that comes with it, after realizing the absurdity of it all, that you start seeing all the paths open to you and consequently feel alive.
 And the best part of it, is that when you start acting with that mentality, it's a domino effect, you slowly trigger a chain of events which will lead you somewhere. I like to believe it's not really the _where_ that matters, but the state of mind you are in. The joy and adrenaline that you feel from living your life fully, risking it to follow your instincts and desires, even in the most dull day-to-day scenarios, what's more worth it than that?
@@ -92,7 +94,7 @@ One night I was on the sofa of the coliving just chatting, and we ended up with 
 
 As a side note, I think an autobiographic book about someone just always taking the risky and uncomfortable choice that more aligns with its instinct when in front of a decision, just for the sake of seeing what happens, would be a sick book.
 
-## ‎
+<div class="text-center">. . .</div>
 
 Of course life has it's challenges, sometimes your freedom is really restricted by something or someone, shit happens and it can get real rough, but if I have the choice I'm putting time and sweat towards what I believe is best for me, so that at least, even if it goes bad, I wont have regrets or question myself about how it could have ended differently.
 

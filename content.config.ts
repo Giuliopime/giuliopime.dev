@@ -10,7 +10,9 @@ export default defineContentConfig({
         description: z.string(),
         date: z.date(),
         project: z.string().optional(),
-        tags: z.array(z.string())
+        tags: z.array(z.string()),
+        hideToc: z.boolean().optional(),
+        audio: z.string().optional()
       })
     }),
     guides: defineCollection({
