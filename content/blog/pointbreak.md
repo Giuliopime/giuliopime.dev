@@ -64,7 +64,7 @@ The quote I mentioned earlier about meeting other people is from the film _Wakin
 The film is centered around dreaming, with at its core:
 
 <video controls playsinline preload="metadata" width="1918" height="1246" poster="/vids/blog/pointbreak/dream_is_destiny.jpg" class="w-full">
-  <source src="/vids/blog/pointbreak/dream_is_destiny.mp4" type="video/mp4">
+  <source src="https://media.giuliopime.dev/vids/blog/pointbreak/dream_is_destiny.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
 
@@ -85,7 +85,7 @@ It's when you assimilate these concepts fully and you embrace this freedom and t
 And the best part of it, is that when you start acting with that mentality, it's a domino effect, you slowly trigger a chain of events which will lead you somewhere. I like to believe it's not really the _where_ that matters, but the state of mind you are in. The joy and adrenaline that you feel from living your life fully, risking it to follow your instincts and desires, even in the most dull day-to-day scenarios, what's more worth it than that?
 
 <video controls playsinline preload="metadata" width="1918" height="1246" poster="/vids/blog/pointbreak/to_say_yes_to_one_instance.jpg" class="w-full">
-  <source src="/vids/blog/pointbreak/to_say_yes_to_one_instance.mp4" type="video/mp4">
+  <source src="https://media.giuliopime.dev/vids/blog/pointbreak/to_say_yes_to_one_instance.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
 
@@ -106,6 +106,6 @@ Regardless, at least I got there, I finally see things for what they are and I'm
 The relief.
 
 <video controls playsinline preload="metadata" width="1918" height="1246" poster="/vids/blog/pointbreak/ciutad_sin_sueno.jpg" class="w-full">
-  <source src="/vids/blog/pointbreak/ciutad_sin_sueno.mp4" type="video/mp4">
+  <source src="https://media.giuliopime.dev/vids/blog/pointbreak/ciutad_sin_sueno.mp4" type="video/mp4">
   Your browser does not support HTML video.
 </video>
