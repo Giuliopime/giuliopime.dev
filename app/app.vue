@@ -36,11 +36,22 @@ useSeoMeta({
   appleMobileWebAppStatusBarStyle: 'black-translucent',
 });
 
-const { p, b, g, c, slash, ctrl, meta } = useMagicKeys({
+const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
   passive: false,
   onEventFired(e) {
     if (e.type !== 'keydown') return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    // allow user to type
+    const target = e.target as HTMLElement | null;
+    if (
+        target &&
+        (target.tagName === 'INPUT' ||
+            target.tagName === 'TEXTAREA' ||
+            target.isContentEditable)
+    ) {
+      return;
+    }
 
     const handled = ['p', 'b', 'g', 'c', '/'];
     if (handled.includes(e.key.toLowerCase())) {
@@ -49,20 +60,28 @@ const { p, b, g, c, slash, ctrl, meta } = useMagicKeys({
   },
 });
 
+const isTypingTarget = () => {
+  const el = document.activeElement as HTMLElement | null;
+  return !!el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
+};
+const noModifiers = () => !ctrl.value && !meta.value && !alt.value;
+
+const canNavigate = () => noModifiers() && !isTypingTarget();
+
 watch(p, (pressed) => {
-  if (pressed && !ctrl.value && !meta.value) router.push('/projects');
+  if (pressed && canNavigate()) router.push('/projects');
 });
 watch(b, (pressed) => {
-  if (pressed && !ctrl.value && !meta.value) router.push('/blog');
+  if (pressed && canNavigate()) router.push('/blog');
 });
 watch(g, (pressed) => {
-  if (pressed && !ctrl.value && !meta.value) router.push('/guides');
+  if (pressed && canNavigate()) router.push('/guides');
 });
 watch(c, (pressed) => {
-  if (pressed && !ctrl.value && !meta.value)
+  if (pressed && canNavigate())
     navigateTo('mailto:ping@giuliopime.dev', { external: true });
 });
 watch(slash, (pressed) => {
-  if (pressed) router.push('/');
+  if (pressed && canNavigate()) router.push('/');
 });
 </script>
