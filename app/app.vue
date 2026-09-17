@@ -45,10 +45,10 @@ const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
     // allow user to type
     const target = e.target as HTMLElement | null;
     if (
-        target &&
-        (target.tagName === 'INPUT' ||
-            target.tagName === 'TEXTAREA' ||
-            target.isContentEditable)
+      target &&
+      (target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.isContentEditable)
     ) {
       return;
     }
@@ -62,7 +62,12 @@ const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
 
 const isTypingTarget = () => {
   const el = document.activeElement as HTMLElement | null;
-  return !!el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
+  return (
+    !!el &&
+    (el.tagName === 'INPUT' ||
+      el.tagName === 'TEXTAREA' ||
+      el.isContentEditable)
+  );
 };
 const noModifiers = () => !ctrl.value && !meta.value && !alt.value;
 
