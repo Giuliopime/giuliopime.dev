@@ -1,48 +1,51 @@
-@import 'tailwindcss' layer(base);
+@import 'tailwindcss';
 @plugin "@tailwindcss/typography";
-
-@config "../../../tailwind.config.js";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer utilities {
-  @font-face {
-    font-family: 'trebuchet';
-    src: url('/fonts/TrebuchetMS.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: sohne-mono;
-    src: url(/fonts/SohneMono-Buch.woff2) format('woff2');
-    font-style: normal;
-    font-display: swap;
-  }
+:root {
+  --c-foreground: 0 0% 0%;
+  --c-background: 37 64% 95%;
+  --c-accent: 297 84% 53%;
+  --c-clickable: 204 92% 76%;
+  --c-border: 0 100% 0%;
 }
 
-@layer utilities {
-  :root {
-    --c-foreground: 0 0% 0%;
-    --c-background: 37 64% 95%;
-    --c-accent: 297 84% 53%;
-    --c-clickable: 204 92% 76%;
-    --c-border: 0 100% 0%;
-  }
+.dark {
+  --c-foreground: 0 0% 98%;
+  --c-background: 0 0% 0%;
+  --c-accent: 297 84% 53%;
+  --c-clickable: 181 97% 72%;
+  --c-border: 0 0% 100%;
+}
 
-  .dark {
-    --c-foreground: 0 0% 98%;
-    --c-background: 0 0% 0%;
-    --c-accent: 297 84% 53%;
-    --c-clickable: 181 97% 72%;
-    --c-border: 0 0% 100%;
-  }
+@theme inline {
+  --color-background: hsl(var(--c-background));
+  --color-foreground: hsl(var(--c-foreground));
+  --color-accent: hsl(var(--c-accent));
+  --color-clickable: hsl(var(--c-clickable));
+  --color-border: hsl(var(--c-border));
+  --font-sohne: sohne-mono;
+}
+
+@font-face {
+  font-family: 'trebuchet';
+  src: url('/fonts/TrebuchetMS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sohne-mono;
+  src: url('/fonts/SohneMono-Buch.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
   html {
     @apply bg-background text-foreground;
-    font-family: 'Trebuchet MS Custom', sans-serif;
+    font-family: 'trebuchet', sans-serif;
     overscroll-behavior: none;
   }
 
