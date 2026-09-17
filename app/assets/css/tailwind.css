@@ -45,7 +45,7 @@
 @layer base {
   html {
     @apply bg-background text-foreground;
-    font-family: 'trebuchet', sans-serif;
+    font-family: 'Trebuchet MS Custom', sans-serif;
     overscroll-behavior: none;
   }
 
@@ -89,10 +89,6 @@
   h6 a {
     @apply no-underline! hover:underline!;
   }
-
-  p a {
-    @apply hover:no-underline;
-  }
 }
 
 @utility vert-center {
@@ -108,7 +104,7 @@
   }
 
   .button-accent {
-    @apply bg-accent/20 px-2 py-1 text-accent hover:bg-accent hover:text-black;
+    @apply bg-accent/20 px-2 py-1 text-accent hover:bg-accent hover:text-white dark:bg-accent/10 dark:hover:bg-accent;
   }
 
   .icon-button-clickable {
@@ -132,6 +128,10 @@
   width: min(100vw - 2rem, 70rem);
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+.prose :is(p, li) a:hover {
+  @apply no-underline;
 }
 
 @media (max-width: 1000px) {

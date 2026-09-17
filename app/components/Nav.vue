@@ -64,7 +64,7 @@
         @click="
           $colorMode.preference = $colorMode.value == 'dark' ? 'light' : 'dark'
         "
-        class="icon-button-clickable"
+        class="icon-button-clickable cursor-pointer"
         tabindex="2"
       >
         <Icon

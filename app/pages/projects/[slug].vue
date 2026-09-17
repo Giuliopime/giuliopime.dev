@@ -91,7 +91,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
                 <a
                   :href="link.url"
                   target="_blank"
-                  class="button-accent text-xs hover:text-white dark:bg-accent/10"
+                  class="button-accent text-xs"
                 >
                   {{ link.title.toUpperCase() }}
                 </a>
