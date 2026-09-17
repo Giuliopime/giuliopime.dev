@@ -1,5 +1,6 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite';
 
+// https://nuxt.comO/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -12,6 +13,12 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/eslint',
   ],
+
+  css: ['~/assets/css/tailwind.css'],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
 
   tailwindcss: {
     cssPath: [`./app/assets/css/tailwind.css`, { injectPosition: 'first' }],
@@ -28,12 +35,6 @@ export default defineNuxtConfig({
     preset: 'cloudflare_pages',
     prerender: {
       autoSubfolderIndex: false,
-    },
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: [],
     },
   },
 

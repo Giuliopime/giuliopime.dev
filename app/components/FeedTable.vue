@@ -18,7 +18,7 @@
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
           :to="entry.path"
-          class="group col-span-2 grid h-[4.25rem] cursor-pointer grid-cols-subgrid items-center gap-x-8 hover:bg-clickable hover:text-black sm:col-span-3 sm:h-12"
+          class="group col-span-2 grid h-17 cursor-pointer grid-cols-subgrid items-center gap-x-8 hover:bg-clickable hover:text-black sm:col-span-3 sm:h-12"
         >
           <span class="hidden whitespace-nowrap opacity-80 sm:block">
             {{ new Date(entry.date).toLocaleDateString() }}

@@ -61,7 +61,7 @@ const relatedProject = computed(() => {
     </div>
 
     <div
-      class="mt-20 flex flex-col justify-start px-4 sm:min-w-[32rem] md:min-w-[42rem]"
+      class="mt-20 flex flex-col justify-start px-4 sm:min-w-lg md:min-w-2xl"
       v-if="relatedProject"
     >
       <span class="py-2 font-sohne text-xs text-accent">/ RELATED-PROJECT</span>

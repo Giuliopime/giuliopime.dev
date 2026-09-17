@@ -62,7 +62,7 @@ const relatedProject = computed(() => {
         <ContentRenderer
           tag="article"
           :value="post"
-          class="prose w-full min-w-0 max-w-none md:prose-xl dark:prose-invert md:max-w-prose dark:text-[#d1d5db]/100"
+          class="prose w-full min-w-0 max-w-none md:prose-xl dark:prose-invert md:max-w-prose dark:text-[#d1d5db]"
         />
         <div class="hidden flex-1 lg:block" v-if="!post.hideToc">
           <div class="sticky top-16 self-start text-sm leading-4 opacity-80">
@@ -71,7 +71,7 @@ const relatedProject = computed(() => {
         </div>
       </div>
       <div
-        class="mt-20 flex flex-col justify-start px-4 sm:min-w-[32rem] md:min-w-[42rem]"
+        class="mt-20 flex flex-col justify-start px-4 sm:min-w-lg md:min-w-2xl"
         v-if="relatedProject"
       >
         <span class="py-2 font-sohne text-xs text-accent"

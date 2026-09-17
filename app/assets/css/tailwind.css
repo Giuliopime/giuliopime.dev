@@ -1,41 +1,41 @@
-@import "tailwindcss";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' layer(base);
 
 @config "../../../tailwind.config.js";
 
-@font-face {
-  font-family: 'trebuchet';
-  src: url('/fonts/TrebuchetMS.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: sohne-mono;
-  src: url(/fonts/SohneMono-Buch.woff2) format('woff2');
-  font-style: normal;
-  font-display: swap;
-}
-
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --c-foreground: 0 0% 0%;
-  --c-background: 37 64% 95%;
-  --c-accent: 297 84% 53%;
-  --c-clickable: 204 92% 76%;
-  --c-border: 0 100% 0%;
+@layer utilities {
+  @font-face {
+    font-family: 'trebuchet';
+    src: url('/fonts/TrebuchetMS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: sohne-mono;
+    src: url(/fonts/SohneMono-Buch.woff2) format('woff2');
+    font-style: normal;
+    font-display: swap;
+  }
 }
 
-.dark {
-  --c-foreground: 0 0% 98%;
-  --c-background: 0 0% 0%;
-  --c-accent: 297 84% 53%;
-  --c-clickable: 181 97% 72%;
-  --c-border: 0 0% 100%;
+@layer utilities {
+  :root {
+    --c-foreground: 0 0% 0%;
+    --c-background: 37 64% 95%;
+    --c-accent: 297 84% 53%;
+    --c-clickable: 204 92% 76%;
+    --c-border: 0 100% 0%;
+  }
+
+  .dark {
+    --c-foreground: 0 0% 98%;
+    --c-background: 0 0% 0%;
+    --c-accent: 297 84% 53%;
+    --c-clickable: 181 97% 72%;
+    --c-border: 0 0% 100%;
+  }
 }
 
 @layer base {
@@ -83,7 +83,7 @@
   h4 a,
   h5 a,
   h6 a {
-    @apply !no-underline hover:!underline;
+    @apply no-underline! hover:underline!;
   }
 
   p a {
