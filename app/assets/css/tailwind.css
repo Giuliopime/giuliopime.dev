@@ -55,7 +55,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('~/assets/images/axiom-pattern.png');
+    background-image: url('/img/axiom-pattern.png');
     z-index: -1;
   }
 
@@ -95,11 +95,11 @@
   }
 }
 
-@layer utilities {
-  .vert-center {
-    @apply flex items-center;
-  }
+@utility vert-center {
+  @apply flex items-center;
+}
 
+@layer components {
   .button-clickable {
     @apply bg-clickable/10 px-2 py-1 text-cyan-800 transition-all duration-200 hover:bg-clickable hover:text-foreground dark:bg-clickable/20 dark:text-clickable dark:hover:bg-clickable dark:hover:text-black;
   }
