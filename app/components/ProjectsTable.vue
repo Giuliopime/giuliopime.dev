@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mt-20 w-full px-2 font-sohne text-xs tracking-tight sm:max-w-[600px]"
+    class="mt-20 w-full px-2 font-sohne text-xs tracking-tight sm:max-w-150"
     :tabindex="tabindex"
   >
     <div class="grid grid-cols-[auto_1fr] gap-x-8">
@@ -8,7 +8,7 @@
       <span class="py-2 font-thin text-accent"
         >/&thinsp;&thinsp;{{ major ? 'MAJOR' : 'MINOR' }}</span
       >
-      <div class="col-span-2 border-b border-border/50"></div>
+      <div class="col-span-2 border-b border-border/50"/>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -16,7 +16,7 @@
           :to="entry.path"
           class="group col-span-2 grid cursor-pointer grid-cols-subgrid items-start gap-x-4 py-3 hover:bg-clickable hover:text-black sm:gap-x-8"
         >
-          <span class="whitespace-nowrap pt-0.5 opacity-80">
+          <span class="pt-0.5 whitespace-nowrap opacity-80">
             {{ new Date(entry.date).toLocaleDateString() }}
           </span>
           <div class="flex flex-col gap-1.5 pr-4 sm:pr-8">
@@ -36,7 +36,7 @@
             <!--            </div>-->
           </div>
         </nuxt-link>
-        <div class="col-span-2 border-b border-border/50"></div>
+        <div class="col-span-2 border-b border-border/50"/>
       </template>
     </div>
   </div>
@@ -49,15 +49,13 @@ defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, path } */
   feed: {
     type: Array<ProjectsCollectionItem>,
-    required: true,
-    default: () => [],
+    required: true
   },
 
   /** Whether showcasing major projects */
   major: {
     type: Boolean,
-    required: true,
-    default: () => false,
+    required: true
   },
 
   /** Tab index for the wrapper element */

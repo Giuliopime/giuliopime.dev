@@ -4,10 +4,10 @@
       src="~/assets/images/uc_1.GIF"
       alt="Under Construction"
       draggable="false"
-      class="select-none px-8 sm:px-20"
-    />
+      class="px-8 select-none sm:px-20"
+    >
 
-    <div class="mt-[60px] max-w-[500px] px-8 text-center sm:px-20">
+    <div class="mt-15 max-w-125 px-8 text-center sm:px-20">
       <p class="font-bold">Hey, Giulio here :)</p>
       <p class="mt-10">
         I architect and craft backend systems, ideally in
@@ -16,7 +16,7 @@
       </p>
       <p>I touch css only with a gun to my head.</p>
 
-      <p class="mb-0.5 mt-8">If you are tight on time</p>
+      <p class="mt-8 mb-0.5">If you are tight on time</p>
       <nuxt-link
         to="/cv_pimenoff_verdolin_giulio.pdf"
         target="_blank"
@@ -26,7 +26,7 @@
       </nuxt-link>
     </div>
 
-    <FeedTable :feed="feed" class="mt-20 px-2 sm:max-w-[600px]" />
+    <FeedTable :feed="feed" class="mt-20 px-2 sm:max-w-150" />
   </div>
 </template>
 

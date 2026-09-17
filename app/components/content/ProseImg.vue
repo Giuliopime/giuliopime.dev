@@ -7,8 +7,8 @@
 			:width="props.width"
 			:height="props.height"
 			loading="lazy"
-			@click="openPreview"
 			class="cursor-zoom-in"
+			@click="openPreview"
 		/>
 
 		<!-- Lightbox Preview -->
@@ -30,11 +30,11 @@
 							@keyup.esc="closePreview"
 						/>
 						<button
-							@click="closePreview"
-							class="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+							class="absolute -top-10 right-0 text-white transition-colors hover:text-gray-300"
 							aria-label="Close preview"
+							@click="closePreview"
 						>
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 							</svg>
 						</button>

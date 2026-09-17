@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DocumentsTable from '~/components/DocumentsTable.vue';
+
 useSeoMeta({
   title: 'blog',
   ogTitle: 'blog',
@@ -9,8 +11,6 @@ useSeoMeta({
     "longer articles about things I'm interested in or experienced",
 });
 
-import DocumentsTable from '~/components/DocumentsTable.vue';
-
 const { data: docs } = await useAsyncData('blog-list', () => {
   return queryCollection('blog')
     .order('date', 'DESC')
@@ -20,13 +20,6 @@ const { data: docs } = await useAsyncData('blog-list', () => {
 </script>
 
 <template>
-  <!--	<div class="flex flex-col items-center justify-center h-full px-8 py-16 gap-6">-->
-  <!--		<ul class="list-disc">-->
-  <!--      <li v-for="doc in docs" :key="doc.path" >-->
-  <!--        <NuxtLink :to="doc.path" class="no-underline">{{ doc.title }}</NuxtLink>-->
-  <!--      </li>-->
-  <!--		</ul>-->
-  <!--	</div>-->
   <div class="flex flex-col items-center pt-20">
     <DocumentsTable :feed="docs" />
   </div>

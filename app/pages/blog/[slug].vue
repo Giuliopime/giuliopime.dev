@@ -32,7 +32,7 @@ const relatedProject = computed(() => {
 </script>
 
 <template>
-  <div class="flex w-full flex-col items-center pb-96 pt-20">
+  <div class="flex w-full flex-col items-center pt-20 pb-96">
     <div class="flex max-w-[950px] flex-col px-4 py-20 text-center">
       <b class="pb-8 text-4xl md:text-6xl">{{ post.title }}</b>
       <div class="flex items-center justify-center gap-2 pb-3">
@@ -57,29 +57,29 @@ const relatedProject = computed(() => {
     <div
       class="flex w-full flex-col items-center bg-background dark:bg-zinc-950"
     >
-      <div class="flex w-full justify-center gap-x-10 px-4 pb-32 pt-16">
-        <div class="hidden flex-1 lg:block" v-if="!post.hideToc" />
+      <div class="flex w-full justify-center gap-x-10 px-4 pt-16 pb-32">
+        <div v-if="!post.hideToc" class="hidden flex-1 lg:block" />
         <ContentRenderer
           tag="article"
           :value="post"
-          class="prose w-full min-w-0 max-w-none md:prose-xl dark:prose-invert md:max-w-prose dark:text-[#d1d5db]"
+          class="prose w-full max-w-none min-w-0 md:prose-xl md:max-w-prose dark:text-[#d1d5db] dark:prose-invert"
         />
-        <div class="hidden flex-1 lg:block" v-if="!post.hideToc">
+        <div v-if="!post.hideToc" class="hidden flex-1 lg:block">
           <div class="sticky top-16 self-start text-sm leading-4 opacity-80">
             <TableOfContents :links="post.body?.toc?.links ?? []" />
           </div>
         </div>
       </div>
       <div
-        class="mt-20 flex flex-col justify-start px-4 sm:min-w-lg md:min-w-2xl"
         v-if="relatedProject"
+        class="mt-20 flex flex-col justify-start px-4 sm:min-w-lg md:min-w-2xl"
       >
         <span class="py-2 font-sohne text-xs text-accent"
           >/ RELATED-PROJECT</span
         >
 
         <div class="grid grid-cols-[1fr_auto] gap-x-8">
-          <div class="col-span-2 border-b border-border/50"></div>
+          <div class="col-span-2 border-b border-border/50" />
           <nuxt-link
             :to="relatedProject.path"
             class="group col-span-2 grid cursor-pointer grid-cols-subgrid items-start gap-x-4 py-3 hover:bg-clickable hover:text-black sm:gap-x-8"
@@ -97,7 +97,7 @@ const relatedProject = computed(() => {
               >
             </div>
           </nuxt-link>
-          <div class="col-span-2 border-b border-border/50"></div>
+          <div class="col-span-2 border-b border-border/50" />
         </div>
       </div>
     </div>

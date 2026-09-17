@@ -20,6 +20,7 @@ export default withNuxt(
     rules: {
       'vue/html-self-closing': 'error',
       'tailwindcss/no-custom-classname': 'off',
+      'vue/multi-word-component-names': 'off'
     },
   },
 );

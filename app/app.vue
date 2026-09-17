@@ -36,6 +36,7 @@ useSeoMeta({
   appleMobileWebAppStatusBarStyle: 'black-translucent',
 });
 
+// ts-ignore @typescript-eslint/no-unused-vars
 const { p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
   passive: false,
   onEventFired(e) {

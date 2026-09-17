@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-full w-full pb-10">
     <div id="bg-image" />
-    <Nav class="fixed left-0 right-0 z-50 px-4" />
+    <Nav class="fixed inset-x-0 z-50 px-4" />
     <div
-      class="gradient-blur-overlay pointer-events-none fixed left-0 right-0 top-0 z-40 h-16"
+      class="gradient-blur-overlay pointer-events-none fixed inset-x-0 top-0 z-40 h-16"
     />
     <slot />
   </div>

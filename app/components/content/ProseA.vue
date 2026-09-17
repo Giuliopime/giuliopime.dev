@@ -19,7 +19,7 @@ function isHttpUrl(string) {
 	return url.protocol === "http:" || url.protocol === "https:";
 }
 const isExternal = isHttpUrl(props.href)
-let bindProps = {
+const bindProps = {
 	to: props.href
 }
 if (isExternal || props.blank) {

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DocumentsTable from '~/components/DocumentsTable.vue';
+
 useSeoMeta({
   title: 'guides',
   ogTitle: 'guides',
@@ -9,8 +11,6 @@ useSeoMeta({
   twitterDescription:
     'technical challenges I encountered and my process for solving them, documented',
 });
-
-import DocumentsTable from '~/components/DocumentsTable.vue';
 
 const { data: docs } = await useAsyncData('guides-list', () => {
   return queryCollection('guides')

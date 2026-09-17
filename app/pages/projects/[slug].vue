@@ -64,13 +64,13 @@ const relatedArticles = computed<FeedEntry[]>(() => {
       <div class="flex flex-col px-2 lg:px-0">
         <div class="mb-10 flex w-full flex-col font-sohne">
           <span class="text-xs text-accent">/ METADATA</span>
-          <hr class="my-2 border-border opacity-80" />
+          <hr class="my-2 border-border opacity-80" >
           <div
             class="grid grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2 opacity-80"
           >
             <span>name:</span>
             <span class="text-right">{{ project.title }}</span>
-            <hr class="col-span-2 border-border opacity-20" />
+            <hr class="col-span-2 border-border opacity-20" >
             <span>release date:</span>
             <span class="text-right">{{
               new Date(project.date).toLocaleDateString()
@@ -82,10 +82,10 @@ const relatedArticles = computed<FeedEntry[]>(() => {
             <!--              {{ tag }}-->
             <!--            </span>-->
             <!--          </div>-->
-            <hr class="col-span-2 border-border opacity-20" />
+            <hr class="col-span-2 border-border opacity-20" >
             <span>links:</span>
             <div
-              class="col-span- flex flex-wrap justify-end gap-x-2 gap-y-2 py-1"
+              class="col-span- flex flex-wrap justify-end gap-2 py-1"
             >
               <template v-for="link in project.links" :key="link.url">
                 <a
@@ -97,13 +97,13 @@ const relatedArticles = computed<FeedEntry[]>(() => {
                 </a>
               </template>
             </div>
-            <hr class="col-span-2 border-border opacity-20" />
+            <hr class="col-span-2 border-border opacity-20" >
           </div>
         </div>
 
         <div
-          class="mb-12 flex w-full flex-col justify-start"
           v-if="relatedArticles.length"
+          class="mb-12 flex w-full flex-col justify-start"
         >
           <FeedTable :feed="relatedArticles">
             <template #header>
@@ -119,7 +119,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
         <ContentRenderer
           tag="article"
           :value="project"
-          class="prose w-full min-w-0 max-w-none md:prose-xl dark:prose-invert md:max-w-prose dark:text-gray-100"
+          class="prose w-full max-w-none min-w-0 md:prose-xl md:max-w-prose dark:text-gray-100 dark:prose-invert"
         />
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div
     ref="navbarContainer"
-    class="grid select-none grid-cols-2 items-center justify-between py-3 font-sohne text-xs tracking-tight"
+    class="grid grid-cols-2 items-center justify-between py-3 font-sohne text-xs tracking-tight select-none"
   >
     <div class="vert-center gap-1">
       <nuxt-link to="/" tabindex="0">
@@ -9,7 +9,7 @@
           src="/favicon.ico"
           alt="home"
           class="h-auto w-[1.4rem] min-w-[1.4rem] hover:opacity-75"
-        />
+        >
       </nuxt-link>
       <nuxt-link
         to="/projects"
@@ -61,11 +61,11 @@
         <Icon name="pixelarticons:github" class="text-base" />
       </nuxt-link>
       <button
+        class="icon-button-clickable cursor-pointer"
+        tabindex="2"
         @click="
           $colorMode.preference = $colorMode.value == 'dark' ? 'light' : 'dark'
         "
-        class="icon-button-clickable cursor-pointer"
-        tabindex="2"
       >
         <Icon
           :name="
@@ -79,6 +79,19 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+
+const navbarContainer = ref<HTMLElement | null>(null);
+const { y } = useWindowScroll();
+const scrolledClasses = ['bg-transparent'];
+
+watch(y, () => {
+  if (y.value > 0) navbarContainer.value?.classList.add(...scrolledClasses);
+  else navbarContainer.value?.classList.remove(...scrolledClasses);
+});
+</script>
 
 <style scoped>
 .gradient-blur {
@@ -97,17 +110,3 @@
   z-index: 0;
 }
 </style>
-
-<script setup lang="ts">
-const route = useRoute();
-const colorMode = useColorMode();
-
-const navbarContainer = ref<HTMLElement | null>(null);
-const { y } = useWindowScroll();
-const scrolledClasses = ['bg-transparent'];
-
-watch(y, () => {
-  if (y.value > 0) navbarContainer.value?.classList.add(...scrolledClasses);
-  else navbarContainer.value?.classList.remove(...scrolledClasses);
-});
-</script>

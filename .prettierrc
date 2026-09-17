@@ -1,6 +1,6 @@
 {
   "singleQuote": true,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindConfig": "./tailwind.config.js",
+  "tailwindStylesheet": "./app/assets/css/tailwind.css",
   "tailwindFunctions": ["cn", "clsx", "cva"]
 }

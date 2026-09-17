@@ -12,7 +12,7 @@
           >/&thinsp;&thinsp;TYPE</span
         >
       </slot>
-      <div class="col-span-2 border-b border-border/50 sm:col-span-3"></div>
+      <div class="col-span-2 border-b border-border/50 sm:col-span-3" />
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -39,7 +39,7 @@
             </span>
           </span>
         </nuxt-link>
-        <div class="col-span-2 border-b border-border/50 sm:col-span-3"></div>
+        <div class="col-span-2 border-b border-border/50 sm:col-span-3" />
       </template>
     </div>
   </div>
@@ -50,8 +50,7 @@ defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, type, path } */
   feed: {
     type: Array,
-    required: true,
-    default: () => [],
+    required: true
   },
 
   /** Tab index for the wrapper element */

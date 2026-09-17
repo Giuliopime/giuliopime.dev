@@ -1,13 +1,13 @@
 <template>
   <div
-    class="mt-20 w-full px-2 font-sohne text-xs tracking-tight sm:max-w-[600px]"
+    class="mt-20 w-full px-2 font-sohne text-xs tracking-tight sm:max-w-150"
     :tabindex="tabindex"
   >
     <div class="grid grid-cols-[auto_1fr] gap-x-8">
       <!-- Header -->
       <span class="py-2 font-thin text-accent">/&thinsp;&thinsp;DATE</span>
       <span class="py-2 font-thin text-accent">/&thinsp;&thinsp;NAME</span>
-      <div class="col-span-2 border-b border-border/50"></div>
+      <div class="col-span-2 border-b border-border/50" />
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -20,7 +20,7 @@
           </span>
           <span class="line-clamp-2 pr-4 sm:pr-8">{{ entry.title }}</span>
         </nuxt-link>
-        <div class="col-span-2 border-b border-border/50"></div>
+        <div class="col-span-2 border-b border-border/50" />
       </template>
     </div>
   </div>
@@ -31,8 +31,7 @@ defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, path } */
   feed: {
     type: Array,
-    required: true,
-    default: () => [],
+    required: true
   },
 
   /** Tab index for the wrapper element */

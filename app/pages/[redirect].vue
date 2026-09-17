@@ -3,7 +3,7 @@
     class="flex min-h-screen grow flex-col items-center justify-center text-xl"
   >
     <p class="vert-center font-sohne">
-      redirecting<span class="loading-dots"></span>
+      redirecting<span class="loading-dots" />
     </p>
   </div>
 </template>
