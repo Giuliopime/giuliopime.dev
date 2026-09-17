@@ -20,7 +20,7 @@ const { data: docs } = await useAsyncData('blog-list', () => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center pt-20">
+  <div class="flex flex-col items-center pt-20 pb-10">
     <DocumentsTable :feed="docs" />
   </div>
 </template>

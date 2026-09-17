@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center pt-26">
+  <div class="flex flex-col items-center pt-26 pb-10">
     <img
       src="~/assets/images/uc_1.GIF"
       alt="Under Construction"

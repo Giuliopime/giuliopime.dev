@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-full w-full pb-10">
+  <div class="min-h-full w-full">
     <div id="bg-image" />
     <Nav class="fixed inset-x-0 z-50 px-4" />
     <div

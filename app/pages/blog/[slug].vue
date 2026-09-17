@@ -32,7 +32,7 @@ const relatedProject = computed(() => {
 </script>
 
 <template>
-  <div class="flex w-full flex-col items-center pt-20 pb-96">
+  <div class="flex w-full flex-col items-center pt-20">
     <div class="flex max-w-[950px] flex-col px-4 py-20 text-center">
       <b class="pb-8 text-4xl md:text-6xl">{{ post.title }}</b>
       <div class="flex items-center justify-center gap-2 pb-3">
@@ -55,7 +55,7 @@ const relatedProject = computed(() => {
     </div>
 
     <div
-      class="flex w-full flex-col items-center bg-background dark:bg-zinc-950"
+      class="flex w-full flex-col items-center bg-background pb-64 dark:bg-zinc-950"
     >
       <div class="flex w-full justify-center gap-x-10 px-4 pt-16 pb-32">
         <div v-if="!post.hideToc" class="hidden flex-1 lg:block" />

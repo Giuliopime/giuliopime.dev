@@ -20,7 +20,7 @@ const minorDocs = computed(() => docs.value?.filter((d) => !d.major) ?? []);
 </script>
 
 <template>
-  <div class="flex flex-col items-center pt-20">
+  <div class="flex flex-col items-center pt-20 pb-10">
     <ProjectsTable v-if="majorDocs.length > 0" :feed="majorDocs" major />
     <ProjectsTable
       v-if="minorDocs.length > 0"

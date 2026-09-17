@@ -59,7 +59,9 @@ const relatedArticles = computed<FeedEntry[]>(() => {
 });
 </script>
 <template>
-  <div class="flex w-full flex-col items-center bg-background/50 pt-32 text-sm">
+  <div
+    class="flex w-full flex-col items-center bg-background/50 pt-32 pb-20 text-sm"
+  >
     <div class="flex w-full flex-col items-center justify-center gap-x-8">
       <div class="flex flex-col px-2 lg:px-0">
         <div class="mb-10 flex w-full flex-col font-sohne">
