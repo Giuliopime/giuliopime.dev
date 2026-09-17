@@ -1,42 +1,46 @@
 <template>
-  <div
-      class="w-full text-xs font-sohne tracking-tight"
-      :tabindex="tabindex"
-  >
-    <div class="grid grid-cols-[1fr_auto] sm:grid-cols-[auto_1fr_auto] gap-x-8">
-
+  <div class="w-full font-sohne text-xs tracking-tight" :tabindex="tabindex">
+    <div class="grid grid-cols-[1fr_auto] gap-x-8 sm:grid-cols-[auto_1fr_auto]">
       <!-- Header -->
       <slot name="header">
-        <span class="hidden sm:block font-thin text-accent py-2">/&thinsp;&thinsp;DATE</span>
-        <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
-        <span class="font-thin text-accent py-2 justify-self-end sm:justify-self-auto">/&thinsp;&thinsp;TYPE</span>
+        <span class="hidden py-2 font-thin text-accent sm:block"
+          >/&thinsp;&thinsp;DATE</span
+        >
+        <span class="py-2 font-thin text-accent">/&thinsp;&thinsp;NAME</span>
+        <span
+          class="justify-self-end py-2 font-thin text-accent sm:justify-self-auto"
+          >/&thinsp;&thinsp;TYPE</span
+        >
       </slot>
-      <div class="col-span-2 sm:col-span-3 border-b border-border/50"></div>
+      <div class="col-span-2 border-b border-border/50 sm:col-span-3"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
-            :to="entry.path"
-            class="group col-span-2 sm:col-span-3 grid grid-cols-subgrid gap-x-8 hover:bg-clickable hover:text-black cursor-pointer items-center h-[4.25rem] sm:h-12"
+          :to="entry.path"
+          class="group col-span-2 grid h-[4.25rem] cursor-pointer grid-cols-subgrid items-center gap-x-8 hover:bg-clickable hover:text-black sm:col-span-3 sm:h-12"
         >
-          <span class="hidden sm:block opacity-80 whitespace-nowrap">
+          <span class="hidden whitespace-nowrap opacity-80 sm:block">
             {{ new Date(entry.date).toLocaleDateString() }}
           </span>
           <div class="flex flex-col">
-            <span class="opacity-80 sm:hidden mb-0.5 whitespace-nowrap">
+            <span class="mb-0.5 whitespace-nowrap opacity-80 sm:hidden">
               {{ new Date(entry.date).toLocaleDateString() }}
             </span>
             <span class="line-clamp-2">{{ entry.name }}</span>
           </div>
-          <span class="sm:pr-8 self-center justify-self-end sm:justify-self-auto">
-            <span class="type-badge group-hover:border-black/50 group-hover:text-black">
+          <span
+            class="self-center justify-self-end sm:justify-self-auto sm:pr-8"
+          >
+            <span
+              class="type-badge group-hover:border-black/50 group-hover:text-black"
+            >
               {{ entry.type }}
             </span>
           </span>
         </nuxt-link>
-        <div class="col-span-2 sm:col-span-3 border-b border-border/50"></div>
+        <div class="col-span-2 border-b border-border/50 sm:col-span-3"></div>
       </template>
-
     </div>
   </div>
 </template>
@@ -55,5 +59,5 @@ defineProps({
     type: Number,
     default: 2,
   },
-})
+});
 </script>

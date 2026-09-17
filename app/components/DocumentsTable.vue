@@ -1,29 +1,27 @@
 <template>
   <div
-      class="mt-20 w-full sm:max-w-[600px] px-2 text-xs font-sohne tracking-tight"
-      :tabindex="tabindex"
+    class="mt-20 w-full px-2 font-sohne text-xs tracking-tight sm:max-w-[600px]"
+    :tabindex="tabindex"
   >
     <div class="grid grid-cols-[auto_1fr] gap-x-8">
-
       <!-- Header -->
-      <span class="font-thin text-accent py-2">/&thinsp;&thinsp;DATE</span>
-      <span class="font-thin text-accent py-2">/&thinsp;&thinsp;NAME</span>
+      <span class="py-2 font-thin text-accent">/&thinsp;&thinsp;DATE</span>
+      <span class="py-2 font-thin text-accent">/&thinsp;&thinsp;NAME</span>
       <div class="col-span-2 border-b border-border/50"></div>
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
         <nuxt-link
-            :to="entry.path"
-            class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer items-center h-12"
+          :to="entry.path"
+          class="group col-span-2 grid h-12 cursor-pointer grid-cols-subgrid items-center gap-x-4 hover:bg-clickable hover:text-black sm:gap-x-8"
         >
-          <span class="opacity-80 whitespace-nowrap">
+          <span class="whitespace-nowrap opacity-80">
             {{ new Date(entry.date).toLocaleDateString() }}
           </span>
           <span class="line-clamp-2 pr-4 sm:pr-8">{{ entry.title }}</span>
         </nuxt-link>
         <div class="col-span-2 border-b border-border/50"></div>
       </template>
-
     </div>
   </div>
 </template>
@@ -42,5 +40,5 @@ defineProps({
     type: Number,
     default: 2,
   },
-})
+});
 </script>

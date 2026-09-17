@@ -21,15 +21,15 @@
     "nuxt": "^4.4.8"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.17.0",
-    "eslint": "^10.10.0",
     "@iconify-json/pixelarticons": "^1.2.7",
+    "@nuxt/eslint": "^1.17.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
+    "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-tailwindcss": "^4.4.0",
     "prettier": "^3.9.7",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "wrangler": "^4.107.0"
+    "wrangler": "^4.133.0"
   }
 }

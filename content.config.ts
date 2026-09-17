@@ -1,4 +1,4 @@
-import {defineContentConfig, defineCollection, z} from '@nuxt/content'
+import { defineContentConfig, defineCollection, z } from '@nuxt/content';
 
 export default defineContentConfig({
   collections: {
@@ -12,8 +12,8 @@ export default defineContentConfig({
         project: z.string().optional(),
         tags: z.array(z.string()),
         hideToc: z.boolean().optional(),
-        audio: z.string().optional()
-      })
+        audio: z.string().optional(),
+      }),
     }),
     guides: defineCollection({
       type: 'page',
@@ -23,8 +23,8 @@ export default defineContentConfig({
         description: z.string(),
         date: z.date(),
         project: z.string().optional(),
-        tags: z.array(z.string())
-      })
+        tags: z.array(z.string()),
+      }),
     }),
     projects: defineCollection({
       type: 'page',
@@ -35,11 +35,13 @@ export default defineContentConfig({
         date: z.date(),
         major: z.boolean(),
         tags: z.array(z.string()),
-        links: z.array(z.object({
-          title: z.string(),
-          url: z.string(),
-        }))
-      })
-    })
-  }
-})
+        links: z.array(
+          z.object({
+            title: z.string(),
+            url: z.string(),
+          }),
+        ),
+      }),
+    }),
+  },
+});

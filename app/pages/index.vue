@@ -1,89 +1,94 @@
 <template>
-  <div class="pt-[6.5rem] flex flex-col items-center">
-    <img src="~/assets/images/uc_1.GIF" alt="Under Construction" draggable="false" class="select-none px-8 sm:px-20">
+  <div class="flex flex-col items-center pt-[6.5rem]">
+    <img
+      src="~/assets/images/uc_1.GIF"
+      alt="Under Construction"
+      draggable="false"
+      class="select-none px-8 sm:px-20"
+    />
 
-    <div class="mt-[60px] max-w-[500px] text-center px-8 sm:px-20 ">
+    <div class="mt-[60px] max-w-[500px] px-8 text-center sm:px-20">
       <p class="font-bold">Hey, Giulio here :)</p>
       <p class="mt-10">
-        I architect and craft backend systems, ideally in <span class="selection:bg-">Kotlin</span>.
-        Sometimes I do Swift development too.
+        I architect and craft backend systems, ideally in
+        <span class="selection:bg-">Kotlin</span>. Sometimes I do Swift
+        development too.
       </p>
-      <p>
-        I touch css only with a gun to my head.
-      </p>
+      <p>I touch css only with a gun to my head.</p>
 
-      <p class="mt-8 mb-0.5">
-        If you are tight on time
-      </p>
-      <nuxt-link to="/cv_pimenoff_verdolin_giulio.pdf" target="_blank" class="button-clickable text-xs">
+      <p class="mb-0.5 mt-8">If you are tight on time</p>
+      <nuxt-link
+        to="/cv_pimenoff_verdolin_giulio.pdf"
+        target="_blank"
+        class="button-clickable text-xs"
+      >
         DOWNLOAD MY CV
       </nuxt-link>
     </div>
 
-    <FeedTable :feed="feed" class="mt-20 sm:max-w-[600px] px-2" />
-
+    <FeedTable :feed="feed" class="mt-20 px-2 sm:max-w-[600px]" />
   </div>
 </template>
 
 <script setup lang="ts">
-import FeedTable from "~/components/FeedTable.vue";
+import FeedTable from '~/components/FeedTable.vue';
 
 useSeoMeta({
-  title: "giuliopime.dev",
-  description: "the place where I write about things I do or think.",
-  ogDescription: "the place where I write about things I do or think.",
-  twitterDescription: "the place where I write about things I do or think.",
-})
+  title: 'giuliopime.dev',
+  description: 'the place where I write about things I do or think.',
+  ogDescription: 'the place where I write about things I do or think.',
+  twitterDescription: 'the place where I write about things I do or think.',
+});
 
 const { data: projects } = await useAsyncData('projects-feed-list', () => {
   return queryCollection('projects')
-      .order('date', 'DESC')
-      .select('title', 'date', 'path')
-      .limit(3)
-      .all()
-})
+    .order('date', 'DESC')
+    .select('title', 'date', 'path')
+    .limit(3)
+    .all();
+});
 
 const { data: blogs } = await useAsyncData('blog-feed-list', () => {
   return queryCollection('blog')
-      .order('date', 'DESC')
-      .select('title', 'date', 'path')
-      .all()
-})
+    .order('date', 'DESC')
+    .select('title', 'date', 'path')
+    .all();
+});
 
 const { data: guides } = await useAsyncData('guides-feed-list', () => {
   return queryCollection('guides')
-      .order('date', 'DESC')
-      .select('title', 'date', 'path')
-      .all()
-})
+    .order('date', 'DESC')
+    .select('title', 'date', 'path')
+    .all();
+});
 
 const feed = computed<FeedEntry[]>(() => {
   const projectEntries: FeedEntry[] =
-      projects.value?.map((p: any) => ({
-        date: new Date(p.date),
-        name: p.title,
-        type: 'project',
-        path: p.path
-      })) ?? []
+    projects.value?.map((p: any) => ({
+      date: new Date(p.date),
+      name: p.title,
+      type: 'project',
+      path: p.path,
+    })) ?? [];
 
   const blogEntries: FeedEntry[] =
-      blogs.value?.map((b: any) => ({
-        date: new Date(b.date),
-        name: b.title,
-        type: 'blog',
-        path: b.path
-      })) ?? []
+    blogs.value?.map((b: any) => ({
+      date: new Date(b.date),
+      name: b.title,
+      type: 'blog',
+      path: b.path,
+    })) ?? [];
 
   const guideEntries: FeedEntry[] =
-      guides.value?.map((g: any) => ({
-        date: new Date(g.date),
-        name: g.title,
-        type: 'guide',
-        path: g.path
-      })) ?? []
+    guides.value?.map((g: any) => ({
+      date: new Date(g.date),
+      name: g.title,
+      type: 'guide',
+      path: g.path,
+    })) ?? [];
 
-  return [...projectEntries, ...blogEntries, ...guideEntries].sort(
-      (a, b) => b.date.getTime() - a.date.getTime()
-  )
-})
+  return [...projectEntries, ...blogEntries, ...guideEntries]
+    .sort((a, b) => b.date.getTime() - a.date.getTime())
+    .slice(0, 10);
+});
 </script>

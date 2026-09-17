@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "trebuchet";
-  src: url("/fonts/TrebuchetMS.ttf") format("truetype");
+  font-family: 'trebuchet';
+  src: url('/fonts/TrebuchetMS.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: sohne-mono;
-  src: url(/fonts/SohneMono-Buch.woff2) format("woff2");
+  src: url(/fonts/SohneMono-Buch.woff2) format('woff2');
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -37,7 +37,7 @@
 @layer base {
   html {
     @apply bg-background text-foreground;
-    font-family: "Trebuchet MS Custom", sans-serif;
+    font-family: 'Trebuchet MS Custom', sans-serif;
     overscroll-behavior: none;
   }
 
@@ -54,7 +54,9 @@
   /*another pattern for dark: https://www.transparenttextures.com/patterns/dark-mosaic.png*/
   /*html.dark #bg-image {}*/
 
-  html, body, #__nuxt {
+  html,
+  body,
+  #__nuxt {
     @apply h-full w-full;
   }
 
@@ -62,11 +64,21 @@
     @apply bg-clickable text-black;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply scroll-mt-20;
   }
 
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
     @apply !no-underline hover:!underline;
   }
 
@@ -81,31 +93,22 @@
   }
 
   .button-clickable {
-
-    @apply py-1 px-2 transition-all duration-200
-    bg-clickable/10 text-cyan-800
-    hover:bg-clickable hover:text-foreground
-    dark:bg-clickable/20 dark:text-clickable
-    dark:hover:bg-clickable dark:hover:text-black;
+    @apply bg-clickable/10 px-2 py-1 text-cyan-800 transition-all duration-200 hover:bg-clickable hover:text-foreground dark:bg-clickable/20 dark:text-clickable dark:hover:bg-clickable dark:hover:text-black;
   }
   .button-clickable-active {
-    @apply py-1 px-2 bg-clickable text-black transition-all duration-200;
+    @apply bg-clickable px-2 py-1 text-black transition-all duration-200;
   }
 
   .button-accent {
-    @apply py-1 px-2 bg-accent/20 text-accent hover:bg-accent hover:text-black;
+    @apply bg-accent/20 px-2 py-1 text-accent hover:bg-accent hover:text-black;
   }
 
   .icon-button-clickable {
-    @apply flex items-center justify-center py-1 px-1
-    bg-clickable/10 text-cyan-800
-    hover:bg-clickable hover:text-foreground
-    dark:bg-clickable/20 dark:text-clickable
-    dark:hover:bg-clickable dark:hover:text-black;
+    @apply flex items-center justify-center bg-clickable/10 px-1 py-1 text-cyan-800 hover:bg-clickable hover:text-foreground dark:bg-clickable/20 dark:text-clickable dark:hover:bg-clickable dark:hover:text-black;
   }
 
   .icon-button-accent {
-    @apply flex items-center justify-center py-1 px-1 bg-accent/20 text-accent hover:bg-accent hover:text-black;
+    @apply flex items-center justify-center bg-accent/20 px-1 py-1 text-accent hover:bg-accent hover:text-black;
   }
 
   .button-minimal {
@@ -113,7 +116,7 @@
   }
 
   .type-badge {
-    @apply border border-border/50 py-0.5 px-1 uppercase text-foreground/80;
+    @apply border border-border/50 px-1 py-0.5 uppercase text-foreground/80;
   }
 }
 

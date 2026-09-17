@@ -1,40 +1,40 @@
 interface Redirect {
-  id: string,
-  name: string,
-  url: string
+  id: string;
+  name: string;
+  url: string;
 }
 
 const redirects: Array<Redirect> = [
   {
     id: 'email',
     name: 'email',
-    url: 'mailto:ping@giuliopime.dev'
+    url: 'mailto:ping@giuliopime.dev',
   },
   {
     id: 'github',
     name: 'github',
-    url: 'https://github.com/Giuliopime'
+    url: 'https://github.com/Giuliopime',
   },
   {
     id: 'medium',
     name: 'medium',
-    url: 'https://medium.com/@gpimenoff'
+    url: 'https://medium.com/@gpimenoff',
   },
   {
     id: 'instagram',
     name: 'instagram',
-    url: 'https://www.instagram.com/giuliopimenoff'
+    url: 'https://www.instagram.com/giuliopimenoff',
   },
   {
     id: 'threads',
     name: 'threads',
-    url: 'https://www.threads.com/@giuliopimenoff'
+    url: 'https://www.threads.com/@giuliopimenoff',
   },
   {
     id: 'twitter',
     name: 'twitter',
-    url: 'https://x.com/giuliopime'
-  }
-]
+    url: 'https://x.com/giuliopime',
+  },
+];
 
-export default redirects
+export default redirects;

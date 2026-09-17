@@ -1,63 +1,77 @@
 <template>
-	<div class="flex flex-col grow justify-center items-center min-h-screen text-xl">
+  <div
+    class="flex min-h-screen grow flex-col items-center justify-center text-xl"
+  >
     <p class="vert-center font-sohne">
       redirecting<span class="loading-dots"></span>
     </p>
-	</div>
+  </div>
 </template>
 
 <script setup>
-import redirects from "~/assets/redirects.js";
+import redirects from '~/assets/redirects.js';
 
 useSeoMeta({
-  title: "teleportation...",
-  description: "enter the farcaster portal 00",
-  ogDescription: "enter the farcaster portal 00",
-  twitterDescription: "enter the farcaster portal 00",
-})
+  title: 'teleportation...',
+  description: 'enter the farcaster portal 00',
+  ogDescription: 'enter the farcaster portal 00',
+  twitterDescription: 'enter the farcaster portal 00',
+});
 
 const route = useRoute();
-const redirect = redirects.find(r => r.id === route.params.redirect.toLowerCase())
+const redirect = redirects.find(
+  (r) => r.id === route.params.redirect.toLowerCase(),
+);
 if (!redirect) {
-	throw createError({
-		statusCode: 404,
-		statusMessage: 'uh oh, nothing here :/',
-	})
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'uh oh, nothing here :/',
+  });
 }
 
 useSeoMeta({
   title: () => redirect.name,
   ogTitle: () => redirect.name,
-})
+});
 
 onMounted(() => {
-	// guarantees DOM tree to be fully built
-	nextTick(() => {
-		if (redirect) {
-			setTimeout(() => {
-				if (redirect.url.startsWith("mailto:")) {
-					window.location.href = redirect.url;
-				} else {
-					location.replace(redirect.url)
-				}
-			}, 1000);
-		}
-	})
-})
+  // guarantees DOM tree to be fully built
+  nextTick(() => {
+    if (redirect) {
+      setTimeout(() => {
+        if (redirect.url.startsWith('mailto:')) {
+          window.location.href = redirect.url;
+        } else {
+          location.replace(redirect.url);
+        }
+      }, 1000);
+    }
+  });
+});
 </script>
 
 <style>
 /* loading dots indicator */
 .loading-dots::after {
-	content: '';
-	animation: dots 1.5s infinite;
-	color: #E220EC; /* pink dots */
+  content: '';
+  animation: dots 1.5s infinite;
+  color: #e220ec; /* pink dots */
 }
 
 @keyframes dots {
-	0%, 20% { content: ''; }
-	40% { content: '.'; }
-	60% { content: '..'; }
-	80%, 100% { content: '...'; }
+  0%,
+  20% {
+    content: '';
+  }
+  40% {
+    content: '.';
+  }
+  60% {
+    content: '..';
+  }
+  80%,
+  100% {
+    content: '...';
+  }
 }
 </style>

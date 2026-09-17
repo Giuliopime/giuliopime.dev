@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
 
   tailwindcss: {
-    cssPath: [`./app/assets/css/tailwind.css`, { injectPosition: "first" }],
+    cssPath: [`./app/assets/css/tailwind.css`, { injectPosition: 'first' }],
     config: {},
     viewer: true,
     exposeConfig: false,
@@ -27,14 +27,14 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'cloudflare_pages',
     prerender: {
-      autoSubfolderIndex: false
-    }
+      autoSubfolderIndex: false,
+    },
   },
 
   vite: {
     optimizeDeps: {
-      include: []
-    }
+      include: [],
+    },
   },
 
   content: {
@@ -45,13 +45,9 @@ export default defineNuxtConfig({
         },
         highlight: {
           theme: 'gruvbox-dark-hard',
-          langs: [
-            'kotlin',
-            'swift',
-            'yaml'
-          ]
-        }
-      }
-    }
-  }
-})
+          langs: ['kotlin', 'swift', 'yaml'],
+        },
+      },
+    },
+  },
+});
