@@ -38,27 +38,27 @@ const relatedProject = computed(() => {
 			<div class="flex items-center justify-center gap-2 pb-3">
         <span>{{ new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }).format(new Date(post.date)) }}</span>
       </div>
-      <a :href="post.audio" target="_blank" class="button-minimal inline-flex items-center justify-center">
+      <a v-if="post.audio" :href="post.audio" target="_blank" class="button-minimal inline-flex items-center justify-center">
         <Icon name="pixelarticons:music" class="text-lg" />
       </a>
 
 		</div>
 
-    <div class="bg-background dark:bg-zinc-950 w-full flex justify-center pt-16 pb-32 px-4 gap-x-10">
-      <div class="hidden lg:block flex-1" v-if="!post.hideToc" />
-      <ContentRenderer tag="article" :value="post" class="w-full prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose min-w-0" />
-      <div class="hidden lg:block flex-1" v-if="!post.hideToc">
-        <div class="self-start sticky top-16 text-sm leading-4 opacity-80">
-          <TableOfContents :links="post.body?.toc?.links ?? []" />
+    <div class="bg-background dark:bg-zinc-950 w-full">
+      <div class="flex justify-center pt-16 pb-32 px-4 gap-x-10">
+        <div class="hidden lg:block flex-1" v-if="!post.hideToc" />
+        <ContentRenderer tag="article" :value="post" class="w-full prose dark:text-[#d1d5db]/100 md:prose-xl dark:prose-invert max-w-none md:max-w-prose min-w-0" />
+        <div class="hidden lg:block flex-1" v-if="!post.hideToc">
+          <div class="self-start sticky top-16 text-sm leading-4 opacity-80">
+            <TableOfContents :links="post.body?.toc?.links ?? []" />
+          </div>
         </div>
       </div>
-    </div>
+      <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem] px-4 " v-if="relatedProject">
+        <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
 
-    <div class="flex flex-col justify-start mt-20 sm:min-w-[32rem] md:min-w-[42rem] px-4 " v-if="relatedProject">
-      <span class="text-accent font-sohne text-xs py-2">/ RELATED-PROJECT</span>
-
-      <div class="grid grid-cols-[1fr_auto] gap-x-8">
-        <div class="col-span-2 border-b border-border/50"></div>
+        <div class="grid grid-cols-[1fr_auto] gap-x-8">
+          <div class="col-span-2 border-b border-border/50"></div>
           <nuxt-link
               :to="relatedProject.path"
               class="group col-span-2 grid grid-cols-subgrid gap-x-4 sm:gap-x-8 hover:bg-clickable hover:text-black cursor-pointer py-3 items-start"
@@ -71,10 +71,12 @@ const relatedProject = computed(() => {
               <span class="line-clamp-3 sm:line-clamp-2 leading-snug opacity-75">{{ relatedProject.description }}</span>
             </div>
           </nuxt-link>
-        <div class="col-span-2 border-b border-border/50"></div>
+          <div class="col-span-2 border-b border-border/50"></div>
+        </div>
       </div>
     </div>
-	</div>
+
+    </div>
 </template>
 
 <style scoped>
