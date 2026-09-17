@@ -128,7 +128,6 @@
   }
 }
 
-/* outside @layer so doesn't get stripped out because it's not used in .vue files */
 .prose .wide {
   width: min(100vw - 2rem, 70rem);
   margin-left: 50%;
