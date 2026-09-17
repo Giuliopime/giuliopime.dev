@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/icon',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/eslint',
   ],
 
   tailwindcss: {
