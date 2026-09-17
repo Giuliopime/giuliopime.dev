@@ -34,7 +34,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
       ?.filter(
         (a) => a.project?.toLowerCase() == project.value?.title?.toLowerCase(),
       )
-      .map((b: any) => ({
+      .map((b) => ({
         date: new Date(b.date),
         name: b.title,
         type: 'blog',
@@ -46,7 +46,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
       ?.filter(
         (a) => a.project?.toLowerCase() == project.value?.title?.toLowerCase(),
       )
-      .map((g: any) => ({
+      .map((g) => ({
         date: new Date(g.date),
         name: g.title,
         type: 'guide',
@@ -84,9 +84,7 @@ const relatedArticles = computed<FeedEntry[]>(() => {
             <!--          </div>-->
             <hr class="col-span-2 border-border opacity-20" >
             <span>links:</span>
-            <div
-              class="col-span- flex flex-wrap justify-end gap-2 py-1"
-            >
+            <div class="col-span- flex flex-wrap justify-end gap-2 py-1">
               <template v-for="link in project.links" :key="link.url">
                 <a
                   :href="link.url"

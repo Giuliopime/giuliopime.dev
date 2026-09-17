@@ -8,7 +8,7 @@
       <span class="py-2 font-thin text-accent"
         >/&thinsp;&thinsp;{{ major ? 'MAJOR' : 'MINOR' }}</span
       >
-      <div class="col-span-2 border-b border-border/50"/>
+      <div class="col-span-2 border-b border-border/50" />
 
       <!-- Rows -->
       <template v-for="(entry, index) in feed" :key="index">
@@ -36,7 +36,7 @@
             <!--            </div>-->
           </div>
         </nuxt-link>
-        <div class="col-span-2 border-b border-border/50"/>
+        <div class="col-span-2 border-b border-border/50" />
       </template>
     </div>
   </div>
@@ -49,13 +49,13 @@ defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, path } */
   feed: {
     type: Array<ProjectsCollectionItem>,
-    required: true
+    required: true,
   },
 
   /** Whether showcasing major projects */
   major: {
     type: Boolean,
-    required: true
+    required: true,
   },
 
   /** Tab index for the wrapper element */

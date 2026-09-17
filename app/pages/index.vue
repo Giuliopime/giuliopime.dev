@@ -64,7 +64,7 @@ const { data: guides } = await useAsyncData('guides-feed-list', () => {
 
 const feed = computed<FeedEntry[]>(() => {
   const projectEntries: FeedEntry[] =
-    projects.value?.map((p: any) => ({
+    projects.value?.map((p) => ({
       date: new Date(p.date),
       name: p.title,
       type: 'project',
@@ -72,7 +72,7 @@ const feed = computed<FeedEntry[]>(() => {
     })) ?? [];
 
   const blogEntries: FeedEntry[] =
-    blogs.value?.map((b: any) => ({
+    blogs.value?.map((b) => ({
       date: new Date(b.date),
       name: b.title,
       type: 'blog',
@@ -80,7 +80,7 @@ const feed = computed<FeedEntry[]>(() => {
     })) ?? [];
 
   const guideEntries: FeedEntry[] =
-    guides.value?.map((g: any) => ({
+    guides.value?.map((g) => ({
       date: new Date(g.date),
       name: g.title,
       type: 'guide',

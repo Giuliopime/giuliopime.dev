@@ -31,7 +31,7 @@ defineProps({
   /** Array of feed entries to display. Each entry should have: { date, name, path } */
   feed: {
     type: Array,
-    required: true
+    required: true,
   },
 
   /** Tab index for the wrapper element */
