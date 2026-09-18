@@ -8,7 +8,9 @@
     >
 
     <div class="mt-15 max-w-125 px-8 text-center sm:px-20">
-      <p class="font-bold">Hey, Giulio here :)</p>
+      <p class="font-bold">Hey,
+        <nuxt-link to="/about" class="giulio-link">Giulio</nuxt-link>
+        here :)</p>
       <p class="mt-10">
         I architect and craft backend systems, ideally in
         <span class="selection:bg-">Kotlin</span>. Sometimes I do Swift

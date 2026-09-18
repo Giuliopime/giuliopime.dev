@@ -43,5 +43,19 @@ export default defineContentConfig({
         ),
       }),
     }),
+    about: defineCollection({
+      type: 'page',
+      source: 'about.md',
+      schema: z.object({
+        title: z.string(),
+        date: z.date(),
+        links: z.array(
+            z.object({
+              title: z.string(),
+              url: z.string(),
+            }),
+        ),
+      })
+    })
   },
 });

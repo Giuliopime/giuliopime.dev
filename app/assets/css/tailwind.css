@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@source '../../../content';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -9,6 +10,7 @@
   --c-accent: 297 84% 53%;
   --c-clickable: 204 92% 76%;
   --c-border: 0 100% 0%;
+  --c-gpink: 297 84% 53%;
 }
 
 .dark {
@@ -17,6 +19,7 @@
   --c-accent: 297 84% 53%;
   --c-clickable: 181 97% 72%;
   --c-border: 0 0% 100%;
+  --c-gpink: 297 84% 53%;
 }
 
 @theme inline {
@@ -25,6 +28,7 @@
   --color-accent: hsl(var(--c-accent));
   --color-clickable: hsl(var(--c-clickable));
   --color-border: hsl(var(--c-border));
+  --color-gpink: hsl(var(--c-gpink));
   --font-sohne: sohne-mono;
 }
 
@@ -121,6 +125,10 @@
 
   .type-badge {
     @apply border border-border/50 px-1 py-0.5 text-foreground/80 uppercase;
+  }
+
+  .giulio-link {
+    @apply underline hover:no-underline hover:bg-accent hover:text-white dark:hover:bg-accent;
   }
 }
 
