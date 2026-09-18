@@ -18,7 +18,7 @@ I discovered the world of programming.
 I actually remember getting home and showing my mom I could create a blank html page with a cool [background color]{class="hover:bg-gpink"}, I was indeed hyped about my discovery!
 
 Eager to figure out how people actually built computer programs, I bought my first programming book (not that I read lots of other kinds of books either way): Head First Java.
-In the heat of the full summer, laptop honored to run the one and only NetBeans, book by my side and a tutorial by [Bucky](https://www.youtube.com/@thenewboston) playing in the background,
+In the heat of the full summer, laptop honored to run the one and only Eclipse, book by my side and a tutorial by [Bucky](https://www.youtube.com/@thenewboston) playing in the background,
 I sat down and tried to understand what was going on in the OOP world.  
 Ngl, I gave up the first time, but then I tried again, and again, until things slowly started to make very little sense.
 
