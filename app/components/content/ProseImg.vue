@@ -4,6 +4,7 @@
 			:is="ImageComponent"
 			:src="refinedSrc"
 			:alt="props.alt"
+			:title="props.title"
 			:width="props.width"
 			:height="props.height"
 			loading="lazy"
@@ -19,18 +20,20 @@
 					class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
 					@click="closePreview"
 				>
-					<div class="relative max-h-[90vh] max-w-[90vw]">
+					<div class="relative flex max-h-[90vh] max-w-[90vw] flex-col" @click.stop>
 						<component
 							:is="ImageComponent"
 							:src="refinedSrc"
 							:alt="props.alt"
 							loading="lazy"
-							class="max-h-[90vh] max-w-full object-contain"
-							@click.stop
+							class="max-h-[80vh] max-w-full object-contain"
 							@keyup.esc="closePreview"
 						/>
+						<p v-if="props.title" class="mt-3 text-center text-sm text-white">
+							{{ props.title }}
+						</p>
 						<button
-							class="absolute -top-10 right-0 text-white transition-colors hover:text-gray-300"
+							class="absolute -top-10 right-0 text-white transition-colors hover:text-gray-300 cursor-pointer"
 							aria-label="Close preview"
 							@click="closePreview"
 						>
@@ -56,7 +59,11 @@ const props = defineProps({
 		type: String,
 		default: ''
 	},
-	alt: {
+		alt: {
+			type: String,
+		default: ''
+	},
+	title: {
 		type: String,
 		default: ''
 	},

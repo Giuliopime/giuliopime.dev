@@ -33,3 +33,6 @@ I was also into drums a lot back then, and I really wanna explore music producin
 
 Now trying to join my passions together, currently freelancing for [BMAT](https://bmat.com) as a backend / big data software developer!
 I'll document on this website what I encounter along my way, enjoy!
+
+::about-photo-album
+::
