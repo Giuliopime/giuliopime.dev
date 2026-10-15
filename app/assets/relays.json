@@ -1,0 +1,79 @@
+[
+  {
+    "type": "book",
+    "title": "Affondare con stile ~ Emalloru",
+    "description": "Novel from one of my favourite italian youtuber, sparked a lot of inspiration.",
+    "url": "https://libreriadelmare.it/en/shop/affondare-con-stile-emalloru-9788804782087/",
+    "date_added": "2026-05-16"
+  },
+  {
+    "type": "film",
+    "title": "Only Yesterday",
+    "description": "It's a film about normal life, makes you reflect about how childhood might have shaped you as a person. Gives you a push to think clearly without the effects of your childhood environment, understanding and giving space to your true desires.",
+    "url": "https://en.wikipedia.org/wiki/Only_Yesterday_(1991_film)",
+    "date_added": "2026-03-04"
+  },
+  {
+    "type": "film",
+    "title": "The pursuit of happyness",
+    "description": "Very emotional, inspires you to do good.",
+    "url": "https://en.wikipedia.org/wiki/The_Pursuit_of_Happyness",
+    "date_added": "2024-09-20"
+  },
+  {
+    "type": "film",
+    "title": "The before trilogy",
+    "description": "Romance film thrilogy by one of my favourite directors Richard Linklater",
+    "url": "https://en.wikipedia.org/wiki/Before_trilogy",
+    "date_added": "2024-12-05"
+  },
+  {
+    "type": "film",
+    "title": "Requiem for a Dream",
+    "description": "Intense and psychedelic",
+    "url": "https://en.wikipedia.org/wiki/Requiem_for_a_Dream",
+    "date_added": "2023-06-27"
+  },
+  {
+    "type": "film",
+    "title": "Her",
+    "description": "",
+    "url": "https://en.wikipedia.org/wiki/Her_(2013_film)",
+    "date_added": "2023-08-10"
+  },
+  {
+    "type": "serie",
+    "title": "Cowboy Bebop",
+    "description": "One of the first anime I watched, and still one of my fav ones.",
+    "url": "https://en.wikipedia.org/wiki/Cowboy_Bebop",
+    "date_added": "2025-04-01"
+  },
+  {
+    "type": "blog",
+    "title": "Brandur",
+    "description": "Took a lot of inspiration from this man, he writes some very interesting programming articles, mostly backend related.",
+    "url": "https://brandur.org",
+    "date_added": "2026-04-07"
+  },
+  {
+    "type": "individual",
+    "title": "Derek Sivers",
+    "description": "Musician, programmer and creator of CDBaby",
+    "url": "https://sive.rs",
+    "date_added": "2025-01-03"
+  },
+  {
+    "type": "blog",
+    "title": "furialog",
+    "description": "Blog from a \"data alchemyst\" who worked a Spotify for a long time, he also wrote a book called \"You Have Not Yet Heard Your Favourite Song\".",
+    "url": "https://furia.com/page.cgi?type=log",
+    "date_added": "2025-09-04"
+  },
+  {
+    "type": "website",
+    "title": "zacoons' place",
+    "description": "Fun guy, makes youtube content too and his website made me stumble upon the Ban Porn movement.",
+    "url": "https://zacoons.com",
+    "date_added": "2025-09-18"
+  }
+]

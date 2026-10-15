@@ -103,6 +103,9 @@
   .button-clickable {
     @apply bg-clickable/10 px-2 py-1 text-cyan-800 transition-all duration-200 hover:bg-clickable hover:text-foreground dark:bg-clickable/20 dark:text-clickable dark:hover:bg-clickable dark:hover:text-black;
   }
+  .button-clickable-minimal {
+    @apply bg-clickable/10 px-2 py-1 text-cyan-800 transition-all duration-200 hover:bg-clickable hover:text-foreground dark:bg-clickable/20 dark:text-clickable dark:hover:bg-clickable dark:hover:text-black;
+  }
   .button-clickable-active {
     @apply bg-clickable px-2 py-1 text-black transition-all duration-200;
   }

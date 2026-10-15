@@ -36,7 +36,7 @@ useSeoMeta({
   appleMobileWebAppStatusBarStyle: 'black-translucent',
 });
 
-const { a, p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
+const { a, p, b, g, c, r, slash, ctrl, meta, alt } = useMagicKeys({
   passive: false,
   onEventFired(e) {
     if (e.type !== 'keydown') return;
@@ -53,7 +53,7 @@ const { a, p, b, g, c, slash, ctrl, meta, alt } = useMagicKeys({
       return;
     }
 
-    const handled = ['a', 'p', 'b', 'g', 'c', '/'];
+    const handled = ['a', 'p', 'b', 'g', 'c', 'r', '/'];
     if (handled.includes(e.key.toLowerCase())) {
       e.preventDefault();
     }
@@ -84,6 +84,9 @@ watch(b, (pressed) => {
 });
 watch(g, (pressed) => {
   if (pressed && canNavigate()) router.push('/guides');
+});
+watch(r, (pressed) => {
+  if (pressed && canNavigate()) router.push('/relays');
 });
 watch(c, (pressed) => {
   if (pressed && canNavigate())

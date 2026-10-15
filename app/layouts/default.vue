@@ -1,11 +1,18 @@
 <template>
-  <div class="min-h-full w-full">
+  <div class="flex min-h-full w-full flex-col">
     <div id="bg-image" />
+
     <Nav class="fixed inset-x-0 z-50 px-4" />
+
     <div
       class="gradient-blur-overlay pointer-events-none fixed inset-x-0 top-0 z-40 h-16"
     />
-    <slot />
+
+    <main class="min-h-screen flex-1">
+      <slot />
+    </main>
+
+    <Footer />
   </div>
 </template>
 

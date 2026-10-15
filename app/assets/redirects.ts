@@ -16,6 +16,11 @@ const redirects: Array<Redirect> = [
     url: 'https://github.com/Giuliopime',
   },
   {
+    id: 'source',
+    name: 'source',
+    url: 'https://github.com/Giuliopime/giuliopime.dev',
+  },
+  {
     id: 'medium',
     name: 'medium',
     url: 'https://medium.com/@gpimenoff',
