@@ -75,5 +75,19 @@
     "description": "Fun guy, makes youtube content too and his website made me stumble upon the Ban Porn movement.",
     "url": "https://zacoons.com",
     "date_added": "2025-09-18"
+  },
+  {
+    "type": "film",
+    "title": "Waking Life",
+    "description": "A film that deeply impacted my life, by Richard Linklater.",
+    "url": "https://en.wikipedia.org/wiki/Waking_Life",
+    "date_added": "2026-05-24"
+  },
+  {
+    "type": "individual",
+    "title": "Patrick Mainstone",
+    "description": "High quality videos that make you think.",
+    "url": "https://www.youtube.com/@patrickmainstone",
+    "date_added": "2026-05-24"
   }
 ]
