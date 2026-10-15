@@ -14,7 +14,7 @@ const photos = [
   {
     src: '/img/about/gsaildoctor.webp',
     key: 'gsaildoctor',
-    alt: 'Me trying to fix the mainsail',
+    alt: 'Trying to fix the mainsail',
     title: 'Me trying to fix the mainsail',
     width: 1200,
     height: 1600,
