@@ -25,7 +25,7 @@ const relayTypeToIcon: Record<RelayEntryType, string> = {
 </script>
 
 <template>
-  <div class="flex flex-col items-center pt-40 pb-10">
+  <div class="flex flex-col items-center pt-40 pb-10 mb-48">
 
     <div class="flex flex-col items-center gap-y-8">
       <p class="text-4xl font-bold md:text-6xl text-center">Relays</p>

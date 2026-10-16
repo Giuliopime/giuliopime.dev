@@ -131,7 +131,11 @@
   }
 
   .giulio-link {
-    @apply underline hover:no-underline hover:bg-accent hover:text-white dark:hover:bg-accent;
+    @apply underline hover:no-underline hover:bg-accent hover:text-white;
+  }
+
+  .footer-link {
+      @apply hover:bg-accent hover:text-white;
   }
 }
 
